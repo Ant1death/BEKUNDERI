@@ -1,0 +1,234 @@
+
+.input
+    &__wrapper
+        display: flex
+        align-items: center
+        position: relative
+        width: 100%
+        margin-bottom: 0.75rem
+        &-icon
+            display: flex
+            position: absolute
+            left: 20px
+            height: 100%
+            align-items: center
+            cursor: pointer
+        &-search
+            padding-left: 50px!important
+            width: 370px
+            background: #fff
+            border: 1px solid #e1e8f1
+            height: 50px
+            padding: 25px 20px 10px
+            font-size: 14px
+            color: #343434
+            box-shadow: none
+            border-radius: 5px
+            font-size: 14px
+            line-height: 20px
+            font-weight: 400
+            &:focus
+                outline: none
+                ~label
+                    top: 0
+                    font-size: 12px
+        &-label 
+            position: absolute
+            padding-left: 50px!important
+            top: 12px
+            left: 0
+            width: 100%
+            padding: 1px 21px 0
+            overflow: hidden
+            color: #999
+            text-overflow: ellipsis
+            white-space: nowrap
+            pointer-events: none
+            -webkit-transition: all .25s ease
+            transition: all .25s ease
+            font-size: 14px
+            line-height: 20px
+            font-weight: 400
+.table
+    position: relative
+    &-submit
+        a
+            cursor: pointer
+        &__btn
+            background-color: #007aff
+            border-color: transparent
+            color: #fff
+            height: auto
+            padding: 17px 17.5px
+            line-height: 1
+            border-width: 1px
+            font-size: 1rem
+            position: relative
+            vertical-align: top
+            border-radius: 5px
+            &:hover
+                background-color: #1d71cc
+    &-wrapper
+        height: auto
+        min-height: 100px
+        max-height: calc(100vh - 345px)
+        font-size: 16px
+        border-collapse: collapse
+        background-color: #fff
+        width: 100%
+        max-width: 100%
+        table-layout: auto
+        border: 1px solid #dcdfe6
+        margin: 0 0 16px 0
+    &-item
+        font-size: 16px
+        border-collapse: collapse
+        background-color: #fff
+        width: 100%
+        max-width: 100%
+        table-layout: auto
+        &_cabinet
+            background-color: #f7f8fc
+        thead
+            tr
+                th
+                    padding: 15px 10px 15px 20px!important
+                    position: relative
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 19px
+                    color: #697481
+                    background: #fff!important
+                    border-bottom: none!important
+                    text-align: left
+                    &:nth-child(1)
+                        min-width: 190px
+                        max-width: 190px
+                        width: 190px
+                    &:nth-child(2)
+                        min-width: 120px
+                        max-width: 120px
+                        width: 120px
+                        text-align: right!important
+                    &:nth-child(3)
+                        min-width: 130px
+                        max-width: 130px
+                        width: 130px
+                    &:nth-child(4)
+                        min-width: 70px
+                        max-width: 70px
+                        width: 70px
+                    &:nth-child(5)
+                        min-width: 110px
+                        max-width: 110px
+                        width: 110px
+                        text-align: right!important
+                    &:nth-child(6)
+                        min-width: 100px
+                        max-width: 100px
+                        width: 100px
+                    &:nth-child(7)
+                        min-width: 50px
+                        max-width: 50px
+                        width: 50px
+                        padding: 14px 25px 14px 5px!important
+                        text-align: right!important
+                    &:nth-child(8)
+                        min-width: 100%
+                        max-width: 100%
+                        width: 100%
+        tbody
+            tr
+                th
+                    padding: 15px 10px 15px 20px!important
+                    position: relative
+                    font-size: 14px
+                    font-weight: 400
+                    line-height: 19px
+                    color: #697481
+                    border-bottom: none!important
+                    text-align: left 
+                    &:nth-child(1)
+                        min-width: 190px
+                        max-width: 190px
+                        width: 190px
+                    &:nth-child(2)
+                        min-width: 120px
+                        max-width: 120px
+                        width: 120px
+                        text-align: right!important
+                    &:nth-child(3)
+                        min-width: 130px
+                        max-width: 130px
+                        width: 130px
+                    &:nth-child(4)
+                        min-width: 70px
+                        max-width: 70px
+                        width: 70px
+                    &:nth-child(5)
+                        min-width: 110px
+                        max-width: 110px
+                        width: 110px
+                        text-align: right!important
+                    &:nth-child(6)
+                        min-width: 100px
+                        max-width: 100px
+                        width: 100px
+                    &:nth-child(7)
+                        min-width: 50px
+                        max-width: 50px
+                        width: 50px
+                        padding: 14px 25px 14px 5px!important
+                        text-align: right!important
+                    &:nth-child(8)
+                        min-width: 100%
+                        max-width: 100%
+                        width: 100%
+    &-pagination
+        display: flex
+        align-items: center
+        padding: 10px 20px
+        position: relative
+        z-index: 1
+        margin-top: -4px
+        background: #fff
+        &__wrapper
+            span
+                &:nth-child(1)
+                    display: inline-block
+                    margin: 0 10px 0 0
+                    font-size: 14px
+                    line-height: 20px
+                    font-weight: 400
+                &:nth-child(3)
+                    display: inline-block
+                    margin: 0 0 0 10px
+                    font-size: 14px
+                    line-height: 20px
+                    font-weight: 400
+            input
+                width: 70px
+                height: 32px
+                padding: 8px 4px
+                text-align: center
+                border: 1px solid #e1e8f1
+                outline: none
+                border-radius: 3px
+                appearance: none
+                font-size: 14px
+                line-height: 20px
+                font-weight: 400
+        &__btns
+            margin: 0 0 0 15px
+            display: flex
+            align-items: center
+            gap: 10px
+        &__btn
+            display: flex
+            cursor: pointer
+            align-items: center
+            svg
+                width: 100%
+                height: 100%
+            &_next
+                transform: rotate(180deg)

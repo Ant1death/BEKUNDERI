@@ -1,0 +1,37 @@
+{
+  "name": "window",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "babel": "latest",
+    "babel-core": "^6.26.3",
+    "babel-loader": "latest",
+    "browser-sync": "^2.27.10",
+    "core-js": "^3.4.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "latest",
+    "gulp-cli": "latest",
+    "gulp-rename": "latest",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.2.1",
+    "gulp-sass": "latest",
+    "sass": "^1.57.1"
+  }
+}
