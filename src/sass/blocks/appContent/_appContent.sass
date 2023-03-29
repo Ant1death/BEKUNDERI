@@ -70,7 +70,7 @@
                 background-color: #1d71cc
     &-wrapper
         height: auto
-        min-height: 100px
+        // min-height: 100px
         max-height: calc(100vh - 345px)
         font-size: 16px
         border-collapse: collapse
@@ -89,6 +89,18 @@
         table-layout: auto
         &_cabinet
             background-color: #f7f8fc
+        &_invites
+            background-color: #f7f8fc
+            tbody
+                tr
+                    .empty_invites
+                        padding: 0.75em 0.75em 0.75em 0.75em
+                        div
+                            display: block
+                            text-align: center
+                            span
+                                display: block
+                                text-align: center
         thead
             tr
                 th

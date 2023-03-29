@@ -11,7 +11,7 @@ const browsersync = require("browser-sync");
 const dist = "./dist/js";
 
 gulp.task("copy-html", () => {
-  return gulp.src("./src/index.html")
+  return gulp.src("./src/*.html")
               .pipe(gulp.dest('dist'))
               .pipe(browsersync.stream());
 });
@@ -71,7 +71,7 @@ gulp.task("watch", () => {
 		notify: true
     });
     
-    gulp.watch("./src/index.html", gulp.parallel("copy-html"));
+    gulp.watch("./src/*.html", gulp.parallel("copy-html"));
     gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel('styles'));
     gulp.watch("./src/assets/**/*.*", gulp.parallel("copy-assets"));
     gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
