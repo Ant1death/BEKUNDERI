@@ -1,0 +1,59 @@
+.form
+    &-create
+        &__input
+            &-wrapper
+                display: flex
+                align-items: center
+                position: relative
+                margin: 0 0 10px 0
+                &:nth-last-child(1)
+                    margin: 0 0 20px 0
+                input
+                    width: 280px
+                    height: 50px
+                    padding: 25px 20px 10px
+                    font-size: 14px
+                    color: #343434
+                    background: #f7f8fc
+                    border: 1px solid transparent
+                    border-color: #f7f8fc
+                    -webkit-box-shadow: none
+                    box-shadow: none
+                    border-radius: 5px
+                    &:focus
+                        background: #ffff
+                        ~label
+                            top: 0
+                            font-size: 12px
+                label
+                    position: absolute
+                    top: 12px
+                    left: 0
+                    width: 100%
+                    padding: 1px 21px 0
+                    overflow: hidden
+                    color: #999
+                    text-overflow: ellipsis
+                    white-space: nowrap
+                    pointer-events: none
+                    -webkit-transition: all .25s ease
+                    transition: all .25s ease
+    &__helper
+        font-size: 14px
+        line-height: 20px
+        font-weight: 400
+        margin-bottom: 5px
+    &__phone
+        &-helper
+            margin-left: 15px
+            cursor: pointer
+    &__btn
+        &_phone
+            background-color: transparent
+            border-color: #007aff
+            color: #007aff
+            padding: 17px 17.5px
+            line-height: 1
+            margin-left: 20px
+            border: 1px solid #007aff
+            border-radius: 5px

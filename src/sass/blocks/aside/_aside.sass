@@ -27,19 +27,23 @@
         overflow: hidden
         height: calc(100% - 130px)!important
         display: block
-        // overflow: hidden scroll
         height: 100%
-        width: calc(100% + 17px)
+        width: calc(100% + 5px)
         &-wrapper
             width: 100%
             padding: 0
             margin: 0 0 0 -10px
             list-style-type: none
             padding: 0 32px
+            overflow-y: auto
+            height: 100%
         &-item
             width: 207px
             margin: 0 0 5px 0
             border-radius: 5px
+            &.active  
+                span
+                    color: #007aff
             a
                 display: flex
                 color: #000
@@ -49,9 +53,8 @@
                 border-radius: 5px
                 padding: 3px 11px
                 &:hover
-                    color: #007aff
-                &.active
-                    color: #007aff
+                    span
+                        color: #007aff
                 svg
                     width: 16px
                     height: 16px
@@ -59,3 +62,4 @@
                     margin: 0 0 0 17px
                     font-size: 1rem
                     color: #343434
+            
