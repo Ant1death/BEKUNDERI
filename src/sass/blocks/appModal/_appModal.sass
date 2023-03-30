@@ -1,0 +1,92 @@
+.modal
+    background-color: rgba(0,0,0,.4)
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    top: 0
+    z-index: 99
+    display: none
+    justify-content: center
+    align-items: center
+    &.active
+        display: flex
+    &__dialog
+        background-color: #fff
+        min-width: 430px
+        min-height: 260px
+        padding: 20px 30px 20px 30px
+        border-radius: 5px
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &-exit
+            width: 10px
+            height: 10px
+            svg
+                width: 10px
+                height: 10px
+    &__settings
+        &-checkbox
+            display: flex
+            align-items: center
+            margin-top: 20px
+            label
+                position: relative
+                padding-left: 0.6rem
+                color: #697481
+                cursor: pointer
+    &__content
+        &-input
+            position: relative
+            margin: 15px 0 0 0
+            input
+                width: 280px
+                height: 50px
+                padding: 25px 20px 10px
+                font-size: 14px
+                color: #343434
+                background: #f7f8fc
+                border: 1px solid transparent
+                border-color: #f7f8fc
+                -webkit-box-shadow: none
+                box-shadow: none
+                border-radius: 5px
+                &:focus
+                    background: #ffff
+                    ~label
+                        top: 0
+                        font-size: 12px
+            label
+                position: absolute
+                top: 12px
+                left: 0
+                width: 100%
+                padding: 1px 21px 0
+                overflow: hidden
+                color: #999
+                text-overflow: ellipsis
+                white-space: nowrap
+                pointer-events: none
+                -webkit-transition: all .25s ease
+                transition: all .25s ease
+    &__footer
+        margin-top: 20px
+        padding: 20px 0 0px 0
+        border-top: 1px solid #e1e8f1
+        &-btn
+            margin-right: 20px
+            border-color: transparent
+            height: auto
+            padding: 17px 17.5px
+            line-height: 1
+            cursor: pointer
+            border-radius: 5px
+            &_apply
+                background-color: #007aff
+                color: #fff
+            &_exit
+                background-color: #f3f6f9
+                border-color: transparent
+                color: rgba(0,0,0,.7)
