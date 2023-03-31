@@ -27,6 +27,13 @@
             svg
                 width: 10px
                 height: 10px
+        &-title
+            display: flex
+            align-items: center
+            font-size: 18px
+            line-height: 24px
+            svg
+                margin-left: 15px
     &__settings
         &-checkbox
             display: flex
@@ -71,6 +78,23 @@
                 pointer-events: none
                 -webkit-transition: all .25s ease
                 transition: all .25s ease
+            textarea
+                width: 90%
+                height: 150px
+                padding: 25px 20px 10px
+                font-size: 14px
+                color: #343434
+                background: #f7f8fc
+                border: 1px solid transparent
+                border-color: #f7f8fc
+                -webkit-box-shadow: none
+                box-shadow: none
+                border-radius: 5px
+                &:focus
+                    background: #ffff
+                    ~label
+                        top: 0
+                        font-size: 12px
     &__footer
         margin-top: 20px
         padding: 20px 0 0px 0

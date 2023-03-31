@@ -2,8 +2,23 @@
 window.addEventListener('DOMContentLoaded',() => {
     // настройка инпутов
     const inputs = document.querySelectorAll('input[type="text"]');
+    const textAreas = document.querySelectorAll('textarea')
     if(inputs) {
         inputs.forEach((item,i) => {
+            if(item.value.length > 0) {
+                item.classList.add('focusedInput');
+            }
+            item.addEventListener('input',() => {
+                if(item.value.length > 0) {
+                    item.classList.add('focusedInput');
+                } else {
+                    item.classList.remove('focusedInput');
+                }
+            });
+        });
+    }
+    if(textAreas) {
+        textAreas.forEach((item,i) => {
             if(item.value.length > 0) {
                 item.classList.add('focusedInput');
             }
