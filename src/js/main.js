@@ -1,5 +1,7 @@
 'use strict'
+import sw2 from './modules/sw2'
 window.addEventListener('DOMContentLoaded',() => {
+    sw2();
     // настройка инпутов
     const inputs = document.querySelectorAll('input[type="text"]');
     const textAreas = document.querySelectorAll('textarea')
@@ -64,7 +66,7 @@ window.addEventListener('DOMContentLoaded',() => {
     const modals = document.querySelectorAll('.modal');
     const modalBtns = document.querySelectorAll('.general-item__btn');
     const modalExitBtns = document.querySelectorAll('.modal-exit');
-
+    const certificateAppleForms = document.querySelectorAll('.modal__certificate-inner');
     
     if(modalBtns) {
         modalBtns.forEach((btn,i) => {
@@ -80,13 +82,34 @@ window.addEventListener('DOMContentLoaded',() => {
             item.addEventListener('click',(e) => {
                 modals.forEach((modal,j) => {
                     modal.classList.remove('active');
+                    if(certificateAppleForms) {
+                        certificateAppleForms.forEach((forma,j) => {
+                            if(forma.classList.contains('modal__certificate-change')) {
+                                forma.classList.remove('active');
+                            } else {
+                                forma.classList.add('active');
+                            }
+                        })
+                    }
                 });
             });
+            
+            
         });
+
         modals.forEach((modal,i) => {
             modal.addEventListener('click',(e) => {
                 if(e.target === modal) {
                     modal.classList.remove('active');
+                    if(certificateAppleForms) {
+                        certificateAppleForms.forEach((forma,j) => {
+                            if(forma.classList.contains('modal__certificate-change')) {
+                                forma.classList.remove('active');
+                            } else {
+                                forma.classList.add('active');
+                            }
+                        })
+                    }
                 }
             });
         })

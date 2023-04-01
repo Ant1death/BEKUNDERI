@@ -32,6 +32,7 @@
     "animate.css": "^4.1.1",
     "axios": "^1.2.1",
     "gulp-sass": "latest",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "sweetalert2": "^11.7.3"
   }
 }

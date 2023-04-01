@@ -95,10 +95,43 @@
                     ~label
                         top: 0
                         font-size: 12px
+    &__certificate
+        &-info
+            display: none
+            &.active
+                display: block
+        &-change
+            display: none
+            &.active
+                display: block
+        &-header
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 20px 0px 15px 0px
+        &-content
+            &_static
+                padding: 16px 20px
+                font-size: 14px
+                line-height: 1.3
+                color: #999
+                background: #f7f8fc
+                border-radius: 5px
+                p
+                    margin-bottom: 5px
+            &_change
+
+        &-helper
+            max-width: 370px
+            margin-top: 15px
     &__footer
         margin-top: 20px
         padding: 20px 0 0px 0
         border-top: 1px solid #e1e8f1
+        display: flex
+        &_docs
+            justify-content: space-between
+            align-items: center
         &-btn
             margin-right: 20px
             border-color: transparent
@@ -114,3 +147,121 @@
                 background-color: #f3f6f9
                 border-color: transparent
                 color: rgba(0,0,0,.7)
+.form
+    &-certificate
+        &_apple
+            &__input
+                &-wrapper
+                    position: relative
+                    margin-bottom: 15px
+                    input
+                        width: 100%
+                        height: 50px
+                        padding: 25px 20px 10px
+                        font-size: 14px
+                        color: #343434
+                        background: #f7f8fc
+                        border: 1px solid transparent
+                        border-color: #f7f8fc
+                        -webkit-box-shadow: none
+                        box-shadow: none
+                        border-radius: 5px
+                        &:focus
+                            background: #ffff
+                            ~label
+                                top: 0
+                                font-size: 12px
+                    label
+                        position: absolute
+                        top: 12px
+                        left: 0
+                        width: 100%
+                        padding: 1px 21px 0
+                        overflow: hidden
+                        color: #999
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        pointer-events: none
+                        -webkit-transition: all .25s ease
+                        transition: all .25s ease
+        &_google
+            margin-top: 20px
+            &__input
+                &-wrapper
+                    position: relative
+                    margin-bottom: 15px
+                    input
+                        width: 100%
+                        height: 50px
+                        padding: 25px 20px 10px
+                        font-size: 14px
+                        color: #343434
+                        background: #f7f8fc
+                        border: 1px solid transparent
+                        border-color: #f7f8fc
+                        -webkit-box-shadow: none
+                        box-shadow: none
+                        border-radius: 5px
+                        &:focus
+                            background: #ffff
+                            ~label
+                                top: 0
+                                font-size: 12px
+                    label
+                        position: absolute
+                        top: 12px
+                        left: 0
+                        width: 100%
+                        padding: 1px 21px 0
+                        overflow: hidden
+                        color: #999
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        pointer-events: none
+                        -webkit-transition: all .25s ease
+                        transition: all .25s ease
+            &-notes
+                display: flex
+                margin: 0 0 10px 0
+// sw2
+.swal2-popup
+    width: 400px !important
+    padding: 30px 30px 20px 30px !important
+.swal2-title
+    padding: 0 !important
+    margin: 0 0 15px 0 !important
+    font-size: 18px !important
+    font-weight: 400 !important
+    line-height: 24px !important
+    color: #0a0a0a
+.swal2-html-container
+    margin: 0 !important
+    font-size: 14px !important
+    line-height: normal !important
+    font-weight: 400 !important
+    text-align: left !important
+.swal2-container.swal2-center>.swal2-popup
+    justify-items: start !important
+    width: 420px !important
+.swal2-actions
+    width: 100% !important
+    justify-content: flex-start !important
+.swal2-container .popup-actions button
+    margin: 0 20px 0 0
+    font-size: 14px
+    padding: 17px 17.5px
+.button.is-link
+    background-color: #007aff
+    border-color: transparent
+    color: #fff
+.button.is-light
+    background-color: #f3f6f9
+    border-color: transparent
+    color: rgba(0,0,0,.7)
+// .swal2-actions .my-actions > button
+//     margin: 0 20px 0 0
+//     font-size: 14px
+//     display: inline-block
+//     display: none !important
+// .swal2-confirm .button .is-link
+//     display: none !important
