@@ -23,7 +23,6 @@ function sw2() {
       sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
         title: 'Подтверждение',
         html: '<p>Вы действительно хотите завершить все другие сеансы?<p/>',
-        content: '',
         showCancelButton: true,
         confirmButtonText: 'Продолжить',
         cancelButtonText: 'Отмена',
@@ -47,7 +46,6 @@ function sw2() {
       sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
         title: 'Замена сертификата',
         html: '<p>При загрузке нового сертификата, старый будет удален<p/>' + '<p>Вы уверены, что хотите загрузить новый сертификат?<p/>',
-        content: '',
         showCancelButton: true,
         confirmButtonText: 'Завершить',
         cancelButtonText: 'Отмена',
@@ -69,6 +67,102 @@ function sw2() {
           });
         } else if (result.isDenied) {}
       });
+    });
+  }
+  const accessesNewBtn = document.querySelector('.accesses__wrapper-new');
+  function createAccesses(emailValue) {
+    const tbodyWrapper = document.querySelector('.table-item_accesses tbody');
+    let trNew = document.createElement('tr');
+    for (let i = 0; i <= 5; i++) {
+      let arrayText = [`${emailValue}`, '', '—', '—', 'Ожидает приглашения ', ''];
+      let thNew = document.createElement('th');
+      thNew.classList.add('table-column');
+      thNew.classList.add('table-column_accesses');
+      thNew.classList.add('table-column_accesses_accounts');
+      thNew.classList.add('table-column_accesses_accounts_news');
+      thNew.classList.add('table-column_accesses_accounts_news_btnd');
+      thNew.innerText = arrayText[i];
+      trNew.appendChild(thNew);
+    }
+    trNew.classList.add('table-row');
+    trNew.classList.add('table-row_accesses');
+    trNew.classList.add('table-row_accesses_new');
+    tbodyWrapper.appendChild(trNew);
+    let arrayTr = document.querySelectorAll('.table-row_accesses_new');
+    arrayTr.forEach((item, i) => {
+      let arrayTh = item.querySelectorAll('.table-column_accesses_accounts_news_btnd');
+      arrayTh.forEach((item, i) => {
+        if (i == 1) {
+          let thDeleteBtn = document.createElement('button');
+          let thDeleteImg = document.createElement('img');
+          item.classList.remove('table-column_accesses_accounts_news');
+          thDeleteBtn.classList.add('accesses__delete-btn');
+          thDeleteImg.src = 'assets/icons/korzina.svg';
+          thDeleteBtn.appendChild(thDeleteImg);
+          item.appendChild(thDeleteBtn);
+          item.classList.remove('table-column_accesses_accounts_news_btnd');
+        } else {
+          item.classList.remove('table-column_accesses_accounts_news_btnd');
+        }
+      });
+    });
+  }
+  if (accessesNewBtn) {
+    accessesNewBtn.addEventListener('click', e => {
+      sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
+        title: 'Добавить пользователя',
+        input: 'email',
+        inputValue: '',
+        inputPlaceholder: 'Введите email',
+        content: '',
+        showCancelButton: true,
+        confirmButtonText: 'Отправить',
+        cancelButtonText: 'Отмена',
+        buttonsStyling: false,
+        customClass: {
+          actions: 'popup-actions',
+          cancelButton: 'button is-light',
+          confirmButton: 'button is-link',
+          input: 'swal2-input input'
+        }
+        // inputValidator: (value) => {
+        //   if (!value) {
+        //     return 'Неправильный email'
+        //   }
+        // }
+      }).then(result => {
+        if (result.isConfirmed) {
+          createAccesses(result.value);
+        } else if (result.isDenied) {}
+      });
+    });
+  }
+  const tbodyAccesses = document.querySelector('.table-item_accesses tbody');
+  if (tbodyAccesses) {
+    tbodyAccesses.addEventListener('click', e => {
+      if (e.target.classList.contains('accesses__delete-btn') || e.target.parentNode.classList.contains('accesses__delete-btn')) {
+        if (e.target.closest('.table-row_accesses_new')) {
+          let tr = e.target.closest('.table-row_accesses_new');
+          sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
+            title: 'Подтверждение',
+            html: '<p>Пользователь awd@mail.ru будет удалён и потеряет доступ к кабинету.<p/>',
+            showCancelButton: true,
+            confirmButtonText: 'Отправить',
+            cancelButtonText: 'Отмена',
+            buttonsStyling: false,
+            customClass: {
+              actions: 'popup-actions',
+              cancelButton: 'button is-light',
+              confirmButton: 'button is-link'
+            }
+          }).then(result => {
+            if (result.isConfirmed) {
+              tr.remove();
+              // e.target.closest('.table-row_accesses_new').remove();
+            } else if (result.isDenied) {}
+          });
+        }
+      }
     });
   }
 }
@@ -4186,6 +4280,7 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sw2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sw2 */ "./src/js/modules/sw2.js");
+// переписать большую часть на классы для переопределения + разбить на модули, коммент остается пока работа по рефакторингу не завершена
 
 
 
@@ -4313,6 +4408,15 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // accesses delete
+  // const tbodyAccesses = document.querySelector('.table-item_accesses tbody');
+  // if(tbodyAccesses) {
+  //     tbodyAccesses.addEventListener('click',(e) => {
+  //         if(e.target.classList.contains('accesses__delete-btn') || e.target.parentNode.classList.contains('accesses__delete-btn')) {
+  //             e.target.closest('.table-row_accesses_new').remove();
+  //         }
+  //     });
+  // }
 });
 })();
 

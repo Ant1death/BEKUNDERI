@@ -1,3 +1,4 @@
+// переписать большую часть на классы для переопределения + разбить на модули, коммент остается пока работа по рефакторингу не завершена
 'use strict'
 import sw2 from './modules/sw2'
 window.addEventListener('DOMContentLoaded',() => {
@@ -130,5 +131,13 @@ window.addEventListener('DOMContentLoaded',() => {
             });
         });
     }
-
+    // accesses delete
+    // const tbodyAccesses = document.querySelector('.table-item_accesses tbody');
+    // if(tbodyAccesses) {
+    //     tbodyAccesses.addEventListener('click',(e) => {
+    //         if(e.target.classList.contains('accesses__delete-btn') || e.target.parentNode.classList.contains('accesses__delete-btn')) {
+    //             e.target.closest('.table-row_accesses_new').remove();
+    //         }
+    //     });
+    // }
 });

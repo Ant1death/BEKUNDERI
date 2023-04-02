@@ -1,0 +1,57 @@
+.account
+    &-info
+        &__wrapper
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(3, 280px)
+            grid-auto-rows: 1fr
+            column-gap: 15px
+            row-gap: 15px
+        &__item
+            width: 280px
+            height: 150px
+            display: flex
+            flex-direction: column
+            padding: 20px
+            color: #007aff
+            text-decoration: none
+            border: 1px solid rgb(225, 232, 241)
+            border-radius: 5px
+            gap: 40px
+        &__header
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__footer
+            display: flex
+            align-items: center
+            justify-content: space-between
+    &__header
+        &-name
+            display: flex
+            align-items: center
+            span
+                margin: 0 0 0 16px
+                font-size: 14px
+                font-weight: 700
+                color: #000
+        &-img
+            width: 26px
+            height: 18px
+    &__footer
+        &-item
+            display: flex
+            align-items: flex-start
+            flex-direction: column
+            span
+                &:nth-child(1)
+                    overflow: hidden
+                    font-size: 10px
+                    color: #343434
+                    text-overflow: ellipsis
+                    text-transform: uppercase
+                    white-space: nowrap
+                &:nth-child(2)
+                    font-size: 14px
+                    font-weight: 700
+                    color: #000
