@@ -1,0 +1,38 @@
+.api
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        width: 880px
+        align-items: stretch
+        gap: 20px
+        &-column
+            width: 50%
+        &-item
+            &_limits
+                margin: 0 0 10px 0
+    &__keys
+        &-wrapper
+            position: relative
+            margin-bottom: 15px
+            &:nth-last-child(1)
+                margin-bottom: 0
+    &__limits
+        &-header
+            padding: 20px 30px
+            border: 1px solid #e1e8f1
+            margin: 0
+            border-radius: 5px 0 0 0
+        &-bottom
+            padding: 15px
+            background: #f7f8fc
+            border: 1px solid #e1e8f1
+            border-top: none
+            border-radius: 0 0 5px 0
+                
+.copy
+    &-btn
+        &__keys
+            position: absolute
+            right: 15px
+            top: 50%
+            transform: translateY(-50%)

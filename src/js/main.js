@@ -114,25 +114,21 @@ window.addEventListener('DOMContentLoaded',() => {
             });
         })
     }
+    // copyBtn api
+    const apiInputWrapper = document.querySelectorAll('.api__keys-wrapper')
+    // const copyBtnApi = document.querySelectorAll('.copy-btn__keys');
+    if(apiInputWrapper) {
+        apiInputWrapper.forEach((item,i) => {
+            item.addEventListener('click',(e) => {
+                const target = e.target;
+                if(target.classList.contains('copy-btn__keys') || target.parentNode.classList.contains('copy-btn__keys')) {
+                    let input = item.querySelector('input');
+                    input.select()
+                    document.execCommand("copy");
+                    alert('Скопировано');
+                }
+            });
+        });
+    }
 
-    
-
-    // window.addEventListener('click',(e) => {
-    //     const target = e.target;
-
-    //     if(target.id.slice(0, -3)) {
-    //         modalBtns.forEach((btn,i) => {
-    //             modals.forEach((modal,j) => {
-    //                 if(btn.id.slice(0, -3) === modal.id.slice(0, -5)) {
-    //                     modal.classList.add('active');
-    //                 }
-    //             });
-    //         });
-    //     }
-    //     if(target.classList.contains('modal__header-exit') || target.classList.contains('modal__footer-btn_exit') || target.classList.contains('modal active')) {
-    //         console.log(target);
-    //     }
-        
-        
-    // });
 });
