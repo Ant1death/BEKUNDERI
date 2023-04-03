@@ -26,6 +26,22 @@ input[type="text"]
         ~label
             top: 0
             font-size: 12px
+input[type="password"]
+    width: 100%
+    height: 50px
+    padding: 25px 20px 10px
+    font-size: 14px
+    color: #343434
+    background: #f7f8fc
+    border: 1px solid rgba(0,0,0,0)
+    border-color: #f7f8fc
+    box-shadow: none
+    border-radius: 5px
+    &:focus
+        background: #ffff
+        ~label
+            top: 0
+            font-size: 12px
 input[type="email"]
     width: 100%
     height: 50px
@@ -69,6 +85,11 @@ label
 .button
     border-width: 1px
     border-radius: 4px
+.modal-btn
+    color: #007aff
+    text-decoration: none
+    line-height: 1.4285714286rem
+    font-size: 1rem
 button.disabled
     cursor: not-allowed
     box-shadow: 0 0 0 1px rgba(0,0,0,0)

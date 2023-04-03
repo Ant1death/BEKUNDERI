@@ -4346,7 +4346,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   // modalki
   const modals = document.querySelectorAll('.modal');
-  const modalBtns = document.querySelectorAll('.general-item__btn');
+  const modalBtns = document.querySelectorAll('.modal-btn');
   const modalExitBtns = document.querySelectorAll('.modal-exit');
   const certificateAppleForms = document.querySelectorAll('.modal__certificate-inner');
   if (modalBtns) {
@@ -4408,15 +4408,19 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-  // accesses delete
-  // const tbodyAccesses = document.querySelector('.table-item_accesses tbody');
-  // if(tbodyAccesses) {
-  //     tbodyAccesses.addEventListener('click',(e) => {
-  //         if(e.target.classList.contains('accesses__delete-btn') || e.target.parentNode.classList.contains('accesses__delete-btn')) {
-  //             e.target.closest('.table-row_accesses_new').remove();
-  //         }
-  //     });
-  // }
+  ;
+  // integration form
+  const optionIntegration = document.querySelector('.form__verification-select');
+  const integrationTypeInput = document.querySelector('#other-input');
+  if (optionIntegration) {
+    optionIntegration.addEventListener('change', () => {
+      if (optionIntegration.value == 'other') {
+        integrationTypeInput.style.display = 'flex';
+      } else {
+        integrationTypeInput.style.display = 'none';
+      }
+    });
+  }
 });
 })();
 
