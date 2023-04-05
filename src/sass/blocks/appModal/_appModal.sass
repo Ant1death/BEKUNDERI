@@ -22,11 +22,15 @@
         align-items: center
         justify-content: space-between
         &-exit
-            width: 10px
-            height: 10px
+            width: 18px
+            height: 18px
             svg
-                width: 10px
+                width: 18px
                 height: 10px
+                display: inline-block
+                vertical-align: baseline
+                overflow: visible
+                outline: none
         &-title
             display: flex
             align-items: center
@@ -95,6 +99,10 @@
                     ~label
                         top: 0
                         font-size: 12px
+    &__form
+        .modal__content-input
+            input
+                width: 100%
     &__certificate
         &-info
             display: none

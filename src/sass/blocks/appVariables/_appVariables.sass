@@ -1,0 +1,47 @@
+.variables
+    &__wrapper
+        
+        &-add
+            margin-top: 20px
+        &-new
+            display: flex
+            align-items: center
+            img
+                margin-right: 8px
+                width: 16px
+                height: 16px
+            span
+                color: #007aff
+.table
+    &-column
+        &_variables
+            &_heads
+                text-align: left !important
+            &_item
+                text-align: left !important
+    &-item
+        &_variables
+            overflow: auto
+            border: 1px solid #e1e8f1
+            display: block
+            max-height: 500px
+    &-row
+        &_variables
+            &_items
+                &:nth-child(odd)
+                    background-color: #f7f8fc
+                .table-column_variables_item
+                    span
+                        color: #007aff
+                        display: inline-block
+                        height: 17px
+                        overflow: hidden
+                        font-size: 14px
+                        line-height: 1.4
+                        text-overflow: ellipsis
+                        white-space: nowrap
+                        width: calc(100% - 65px)
+                        vertical-align: top
+                        cursor: pointer
+                    &:first-child
+                        display: flex
