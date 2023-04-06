@@ -161,21 +161,41 @@
                             </thead>
                             <tbody>
                                 <tr class="table-row table-row_variables table-row_variables_items">
-                                    <th class="table-column table-column_variables table-column_variables_item"> <span>`cardholder`</span></th>
-                                    <th class="table-column table-column_variables table-column_variables_item">—</th>
-                                    <th class="table-column table-column_variables table-column_variables_item">Имя фамилия</th>
+                                    <th class="table-column table-column_variables table-column_variables_item"> 
+                                        <input type="text" value="`cardholder`" class="variable-name" readonly="readonly">
+                                        <button class="variables-copy variables-btn">
+                                            <img src="assets/icons/copy.svg" alt="copy">
+                                        </button>
+                                    </th>
+                                    <th class="table-column table-column_variables table-column_variables_item">
+                                        <span class="variable-defaultValue">—</span>
+                                    </th>
+                                    <th class="table-column table-column_variables table-column_variables_item">
+                                        <span class="variable-description">Имя фамилия</span>
+                                    </th>
                                     <th class="table-column table-column_variables table-column_variables_item"></th>
                                 </tr>
                                 <tr class="table-row table-row_variables table-row_variables_items">
-                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new"> <span>`cardholder`</span></th>
-                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new">—</th>
-                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new">Имя фамилия</th>
+                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new"> 
+                                        <input type="text" value="`cardholder`" class="variable-name" readonly="readonly">
+                                        <button class="variables-settings variables-btn">
+                                            <img src="assets/icons/pen.svg" alt="copy">
+                                        </button>
+                                        <button class="variables-delete variables-btn">
+                                            <img src="assets/icons/korzina.svg" alt="copy">
+                                        </button>
+                                        <button class="variables-copy variables-btn">
+                                            <img src="assets/icons/copy.svg" alt="copy">
+                                        </button>
+                                    </th>
+                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new">
+                                        <span class="variable-defaultValue">—</span>
+                                    <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new">
+                                        <span class="variable-description">Имя фамилия</span>
+                                    </th>
                                     <th class="table-column table-column_variables table-column_variables_item table-column_variables_item_new"></th>
                                 </tr>
                             </tbody>
-                            <!-- <table class="table-item table-item_accesses table-item_accesses_accounts">
-                                
-                            </table> -->
                         </table>
                         <div class="variables__wrapper-add">
                             <button class="variables__wrapper-new modal-btn" id="variablesNewBtn"> 
@@ -211,6 +231,38 @@
                                 </div>
                                 <div class="modal__footer">
                                     <button class="modal__footer-btn modal__footer-btn_apply" type="submit" form="variableAddForm">Добавить</button>
+                                    <button class="modal__footer-btn modal__footer-btn_exit modal-exit">Отмена</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal variableModal-settings">
+                            <div class="modal__dialog">
+                                <div class="modal__header">
+                                    <span class="modal__header-title">Добавить переменную</span>
+                                    <button class="modal__header-exit modal-exit">
+                                        <svg data-v-7393e354="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="18" height="18" class="svg-inline--fa fa-times fa-w-11"><path data-v-7393e354="" fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" class=""></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="modal__content">
+                                    <form action="" method="post" id="variableChangeForm" class="modal__form">
+                                        <div class="modal__content-input">
+                                            <input type="text" id="variableNameInput" class="focusedInput" readonly="readonly">
+                                            <label for="">Имя переменной</label>
+                                        </div>
+                                        <div class="modal__content-input">
+                                            <input type="text" id="variableDefaultValueInput" class="focusedInput">
+                                            <label for="">Значение по умолчанию</label>
+                                        </div>
+                                        <div class="modal__content-input">
+                                            <input type="text" id="variableDescriptionInput" class="focusedInput">
+                                            <label for="">Описание</label>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                                <div class="modal__footer">
+                                    <button class="modal__footer-btn modal__footer-btn_apply" type="submit" form="variableChangeForm">Добавить</button>
                                     <button class="modal__footer-btn modal__footer-btn_exit modal-exit">Отмена</button>
                                 </div>
                             </div>

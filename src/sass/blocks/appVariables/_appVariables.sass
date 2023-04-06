@@ -10,15 +10,38 @@
                 margin-right: 8px
                 width: 16px
                 height: 16px
-            span
-                color: #007aff
-.table
+    &-btn
+        display: flex
+        img
+            width: 18px
+.variable
+    &-name 
+        color: #007aff !important
+        padding: 0 !important
+        height: 18px !important
+        background: none !important
+        outline: none !important
+        border: none !important
+        font-size: 14px !important
+        line-height: 1.4 !important
+        text-overflow: ellipsis !important
+        white-space: nowrap !important
+        width: calc(100% - 65px) !important
+        display: inline-block !important
+        overflow: hidden !important
+        vertical-align: top !important
+        cursor: pointer !important
+.table 
     &-column
         &_variables
             &_heads
                 text-align: left !important
             &_item
                 text-align: left !important
+                min-width: 265px !important
+                max-width: 265px !important
+                width: 265px !important
+                gap: 15px
     &-item
         &_variables
             overflow: auto
@@ -31,17 +54,13 @@
                 &:nth-child(odd)
                     background-color: #f7f8fc
                 .table-column_variables_item
-                    span
-                        color: #007aff
-                        display: inline-block
-                        height: 17px
-                        overflow: hidden
-                        font-size: 14px
-                        line-height: 1.4
-                        text-overflow: ellipsis
-                        white-space: nowrap
-                        width: calc(100% - 65px)
-                        vertical-align: top
-                        cursor: pointer
                     &:first-child
                         display: flex
+                        justify-content: space-between
+#variableNameInput
+    background-color: #f5f5f5
+    border-color: #f5f5f5
+    box-shadow: none
+    color: #7a7a7a
+    opacity: .6
+    cursor: not-allowed

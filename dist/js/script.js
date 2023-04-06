@@ -4392,6 +4392,31 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  // variable settings
+  const variableWrapperTr = document.querySelectorAll('.table-row_variables_items');
+  if (variableWrapperTr) {
+    variableWrapperTr.forEach((item, i) => {
+      item.addEventListener('click', e => {
+        const target = e.target;
+        if (target.classList.contains('variableModal-settings') || target.parentNode.classList.contains('variables-settings')) {
+          let variableName = item.querySelector('.variable-name').value;
+          let variableDefaultValue = item.querySelector('.variable-defaultValue').innerText;
+          let variableDescription = item.querySelector('.variable-description').innerText;
+          modals.forEach((modal, j) => {
+            if (modal.classList.contains('variableModal-settings')) {
+              let variableNameInput = modal.querySelector('#variableNameInput');
+              let variableDefaultValueInput = modal.querySelector('#variableDefaultValueInput');
+              let variableDescriptionInput = modal.querySelector('#variableDescriptionInput');
+              variableNameInput.value = variableName;
+              variableDefaultValueInput.value = variableDefaultValue;
+              variableDescriptionInput.value = variableDescription;
+              modal.classList.add('active');
+            }
+          });
+        }
+      });
+    });
+  }
   // copyBtn api
   const apiInputWrapper = document.querySelectorAll('.api__keys-wrapper');
   // const copyBtnApi = document.querySelectorAll('.copy-btn__keys');
@@ -4402,6 +4427,22 @@ window.addEventListener('DOMContentLoaded', () => {
         if (target.classList.contains('copy-btn__keys') || target.parentNode.classList.contains('copy-btn__keys')) {
           let input = item.querySelector('input');
           input.select();
+          document.execCommand("copy");
+          alert('Скопировано');
+        }
+      });
+    });
+  }
+  ;
+  // copyBtn variables
+  const variablesWrapper = document.querySelectorAll('.table-row_variables_items');
+  if (variablesWrapper) {
+    variablesWrapper.forEach((item, i) => {
+      item.addEventListener('click', e => {
+        const target = e.target;
+        if (target.classList.contains('variables-copy') || target.parentNode.classList.contains('variables-copy')) {
+          let name = item.querySelector('.variable-name');
+          name.select();
           document.execCommand("copy");
           alert('Скопировано');
         }
