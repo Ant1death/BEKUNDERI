@@ -149,10 +149,15 @@
                     <button class="sample-wallets__btn">Google Pay</button>
                 </div>
                 <div class="sample">
-                    <div class="sample__wrapper sample__wrapper_wallet active">
+                    <div class="sample__wrapper sample__wrapper_wallet">
                         <div class="sample__item sample__item_template sample__item_apple">
                             <div class="sample__header">
-                                Владелец <span>`cardholder`</span>
+                                <div></div>
+                                <div>
+                                    <span>Владелец</span>
+                                    <span>`cardholder`</span>
+                                </div>
+                                
                             </div>
                             <div class="sample__img">
                                 <img src="assets/images/shablonkart.png" alt="darova">
@@ -178,49 +183,96 @@
                                 <button class="sample__settings-btn">Обратная</button>
                             </div>
                             <div class="sample__settings-wrapper">
-                                <div class="sample__settings-item active">
+                                <div class="sample__settings-item sample__settings-item_select active">
                                     <ul>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Название организации</span>
                                         </li>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Логотип</span>
                                         </li>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Обложка</span>
                                         </li>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Цвета</span>
                                         </li>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Верхнее поле</span>
                                         </li>
                                         <li>
-                                            <img src="" alt="icon">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Поле слева</span>
                                         </li>
                                         <li>
-                                            <img src="" alt="icon">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Поле по центру</span>
                                         </li>
-                                        <li>
-                                            <img src="" alt="icon">
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
                                             <span>Поля справа</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="sample__settings-item">
-                                    
+                                <div class="sample__settings-item sample__settings-item_form">
+                                    <form action="" method="post">
+                                        <ul>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Название организации </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Ваш текст</label>
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p> Название организации отображается на обратной стороне Apple карты. </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Логотип </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="file">
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>   Используйтe изображение без фона (с прозрачностью), формат *.png, размер 320px * 100px.   </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Обложка </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="file">
+                                                    <button type="button" class="delete-background"> Удалить обложку </button>
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>   Используйтe изображение без фона (с прозрачностью), формат *.png, размер 320px * 100px.   </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="sample__wrapper sample__wrapper_wallet">
+                    <!-- <div class="sample__wrapper sample__wrapper_wallet">
                         <div class="sample__item sample__item_template sample__item_google">
                             <div class="sample__header">
                                 <span>
@@ -247,7 +299,7 @@
                                 <img src="assets/images/shablonkart.png" alt="darova">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </main>
         </div>

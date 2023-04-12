@@ -4318,32 +4318,70 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
   // переключение в редакторе шаблона карт
-  const sampleWalletBtns = document.querySelectorAll('.sample-wallets__btn');
-  const sampleWalletWrappers = document.querySelectorAll('.sample__wrapper_wallet');
-  function hideTabs() {
-    sampleWalletWrappers.forEach(item => {
-      item.classList.remove('active');
+  // const sampleWalletBtns = document.querySelectorAll('.sample-wallets__btn');
+  // const sampleWalletWrappers = document.querySelectorAll('.sample__wrapper_wallet');
+
+  // function hideTabs() {
+  //     sampleWalletWrappers.forEach(item => {
+  //         item.classList.remove('active');
+  //     });
+
+  //     sampleWalletBtns.forEach(item => {
+  //         item.classList.remove('active');
+  //     });
+  // }
+  // function showTabs(i = 0) {
+  //     sampleWalletWrappers[i].classList.add('active');
+  //     sampleWalletBtns[i].classList.add('active');
+  // }
+  // window.addEventListener('click', (event) => {
+  //     const target = event.target;
+
+  //     if(target && target.classList.contains('sample-wallets__btn')) {
+  //         sampleWalletBtns.forEach((item, i) => {
+  //             if (target == item) {
+  //                 hideTabs();
+  //                 showTabs(i);
+  //             }
+  //         });
+  //     }
+  // });
+  // переключение на форму настроек
+  const sampleWalletSelect = document.querySelector('.sample__settings-item_select');
+  const sampleWalletLi = document.querySelectorAll('.sample__settings-item_select li');
+  const sampleWalletSettingsForm = document.querySelector('.sample__settings-item_form');
+  const sampleWalletSettingsLi = document.querySelectorAll('.sample__settings-item_form li');
+  const returnBtn = document.querySelectorAll('.settings-exit');
+  console.log(sampleWalletSettingsLi);
+  sampleWalletLi.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      sampleWalletSelect.classList.remove('active');
+      sampleWalletSettingsForm.classList.add('active');
+      sampleWalletSettingsLi[i].classList.add('active');
+      console.log(i);
     });
-    sampleWalletBtns.forEach(item => {
-      item.classList.remove('active');
-    });
-  }
-  function showTabs() {
-    let i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    sampleWalletWrappers[i].classList.add('active');
-    sampleWalletBtns[i].classList.add('active');
-  }
-  window.addEventListener('click', event => {
-    const target = event.target;
-    if (target && target.classList.contains('sample-wallets__btn')) {
-      sampleWalletBtns.forEach((item, i) => {
-        if (target == item) {
-          hideTabs();
-          showTabs(i);
-        }
-      });
-    }
   });
+  returnBtn.forEach((btn, j) => {
+    btn.addEventListener('click', e => {
+      sampleWalletSettingsLi.forEach((item, i) => {
+        item.classList.remove('active');
+      });
+      sampleWalletSettingsForm.classList.remove('active');
+      sampleWalletSelect.classList.add('active');
+    });
+  });
+  // window.addEventListener('click', (event) => {
+  //     const target = event.target;
+
+  //     if(target && target.classList.contains('sample-wallets__btn')) {
+  //         sampleWalletBtns.forEach((item, i) => {
+  //             if (target == item) {
+  //                 hideTabs();
+  //                 showTabs(i);
+  //             }
+  //         });
+  //     }
+  // });
   // modalki
   const modals = document.querySelectorAll('.modal');
   const modalBtns = document.querySelectorAll('.modal-btn');
