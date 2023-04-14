@@ -70,26 +70,30 @@ window.addEventListener('DOMContentLoaded',() => {
     const sampleWalletSettingsLi = document.querySelectorAll('.sample__settings-item_form li');
     const returnBtn = document.querySelectorAll('.settings-exit');
 
-    console.log(sampleWalletSettingsLi)
-
-    sampleWalletLi.forEach((item,i) => {
-        item.addEventListener('click', () => {
-            sampleWalletSelect.classList.remove('active');
-            sampleWalletSettingsForm.classList.add('active');
-            sampleWalletSettingsLi[i].classList.add('active');
-            console.log(i);
-        });
-    })
-    returnBtn.forEach((btn,j) => {
-        btn.addEventListener('click',(e) => {
-            sampleWalletSettingsLi.forEach((item,i) => {
-                item.classList.remove('active');
+    if(sampleWalletLi) {
+        sampleWalletLi.forEach((item,i) => {
+            item.addEventListener('click', () => {
+                sampleWalletSelect.classList.remove('active');
+                sampleWalletSettingsForm.classList.add('active');
+                sampleWalletSettingsLi[i].classList.add('active');
+                console.log(i);
             });
-            sampleWalletSettingsForm.classList.remove('active');
-            sampleWalletSelect.classList.add('active');
+        })
+    }
+    if(returnBtn) {
+        returnBtn.forEach((btn,j) => {
+            btn.addEventListener('click',(e) => {
+                sampleWalletSettingsLi.forEach((item,i) => {
+                    item.classList.remove('active');
+                });
+                sampleWalletSettingsForm.classList.remove('active');
+                sampleWalletSelect.classList.add('active');
+            });
+            
         });
-        
-    })
+    }
+    
+    
     // window.addEventListener('click', (event) => {
     //     const target = event.target;
 
