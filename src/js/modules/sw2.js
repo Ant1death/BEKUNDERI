@@ -129,6 +129,7 @@ function sw2() {
           }).then((result) => {
             if (result.isConfirmed) {
               createAccesses(result.value);
+              
             } else if (result.isDenied) {
             
             }

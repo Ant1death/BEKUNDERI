@@ -217,10 +217,14 @@
                                             <img src="assets/icons/a.svg" alt="icon">
                                             <span>Поля справа</span>
                                         </li>
+                                        <li class="">
+                                            <img src="assets/icons/a.svg" alt="icon">
+                                            <span>Бар код</span>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="sample__settings-item sample__settings-item_form">
-                                    <form action="" method="post">
+                                    <form action="" method="post" id="apple-front">
                                         <ul>
                                             <li class="">
                                                 <div class="sample__settings-item_form-head">
@@ -260,10 +264,189 @@
                                                 </div>
                                                 <div class="sample__settings-item_form-content">
                                                     <input type="file">
-                                                    <button type="button" class="delete-background"> Удалить обложку </button>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <button type="button" class="delete-background"> 
+                                                        <img src="assets/icons/korzina.svg" alt="">
+                                                        Удалить обложку 
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>    Используйтe изображение с фоном (без прозрачности), формат *.png или *.jpg, размер 620px * 246px.    </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Цвета </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <div class="color-wrapper">
+                                                        <p>Текст</p>
+                                                        <input type="color">
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <div class="color-wrapper">
+                                                        <p>Фон карты</p>
+                                                    
+                                                        <input type="color">
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <div class="color-wrapper">
+                                                        <p>Заголовок</p>
+                                                        <input type="color">
+
+                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="sample__settings-item_form-bottom">
-                                                    <p>   Используйтe изображение без фона (с прозрачностью), формат *.png, размер 320px * 100px.   </p>
+                                                    <p> Цвета фона карты, заголовков и полей. </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Верхнее поле </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Заголовок</label>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Текст</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Уведомление</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>  В поле «Уведомление» используйтe «%@» — будет заменено на значение поля «Текст».  </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Поле слева </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Заголовок</label>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Текст</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Уведомление</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>  В поле «Уведомление» используйтe «%@» — будет заменено на значение поля «Текст».  </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Поле по центру </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Заголовок</label>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Текст</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Уведомление</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>  В поле «Уведомление» используйтe «%@» — будет заменено на значение поля «Текст».  </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span> Поле справа </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Заголовок</label>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Текст</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Уведомление</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>  В поле «Уведомление» используйтe «%@» — будет заменено на значение поля «Текст».  </p>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="sample__settings-item_form-head">
+                                                    <button type="button" class="settings-exit">
+                                                        <img src="assets/icons/arrow.svg" alt="arrow">
+                                                    </button>
+                                                    <span>  Баркод  </span>
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <select name="" class="sample__select">
+                                                        <option value="QR-код">QR-код</option>
+                                                        <option value="Штрих-код">Штрих-код</option>
+                                                        <option value="Отсутствует">Отсутствует</option>
+                                                   </select>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Код</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-content">
+                                                    <input type="text">
+                                                    <label for=""> Текст</label>
+                                                    
+                                                </div>
+                                                <div class="sample__settings-item_form-bottom">
+                                                    <p>   Используйте формат QR-кода или штрих-кода для идентификации клиентов с помощью сканера или камеры.   </p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -300,6 +483,9 @@
                             </div>
                         </div>
                     </div> -->
+                </div>
+                <div class="bottom-btns">
+                    <button type="submit" form="apple-front" class=""> Сохранить </button>
                 </div>
             </main>
         </div>
