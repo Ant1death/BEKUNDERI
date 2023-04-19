@@ -6,5 +6,199 @@
         &__item
             border: 1px solid #e1e8f1
             padding: 8px 11px
+            transition: all .15s ease
+            &:hover  
+                background: rgba(0,122,255,.1)
             &.active
                 color: #007aff
+    &-content
+        display: none
+        &.open
+            display: block
+    &-wrapper
+        display: flex
+        align-items: flex-start
+
+    &-status
+        padding: 15px 10px
+        margin: 0 0 0 10px
+        align-items: center
+        display: flex
+        &__circle
+            border: none
+            width: 10px
+            height: 10px
+            margin: 0 10px 0 0
+            border-radius: 50%
+            background: #9da9b8
+        &__text
+            color: #697481
+    &-configure
+        display: none
+        max-width: 580px
+        width: 100%
+        &.open
+            display: block
+        &__form
+            display: grid
+            grid-template-areas: "a a a a a a" "b b b d d d" "c c g g h h" "j j j j j j"
+            gap: 15px
+        &__title
+            margin: 30px 0 20px 0
+            font-size: 18px
+        &__label
+            position: absolute
+            top: 12px
+            left: 0
+            width: 100%
+            padding: 1px 21px 0
+            overflow: hidden
+            color: #999
+            text-overflow: ellipsis
+            white-space: nowrap
+            pointer-events: none
+            transition: all .25s ease
+            font-size: 14px
+            line-height: 20px
+            font-weight: 400
+        &__checkbox-label
+            color: #999
+            padding: 0
+            padding-left: 12px
+        &__input
+            display: flex
+            align-items: center
+            position: relative
+            width: 100%
+            margin-bottom: 0.75rem
+            &_server
+                grid-area: a
+            &_login
+                grid-area: b
+            &_password
+                grid-area: d
+            &_id_wallet
+                grid-area: h
+            &_id_organisation
+                grid-area: c
+            &_id_programm
+                grid-area: g
+            &_options
+                grid-area: j
+        &__button
+            width: 110px
+            height: 50px
+            color: #fff
+            background-color: #017cff
+            border: 1px solid transparent
+            padding: 17px 17.5px
+            border-radius: 5px
+            line-height: 1
+            transition: all .15s ease
+            margin-right: 30px
+            &:hover
+                background-color: #0074f2
+            &.white
+                color: #007aff
+                background-color: #fff
+                border: 1px solid #007aff
+                &:hover
+                    background: rgba(0,122,255,.1)
+                
+        &__footer
+            align-items: center
+            box-sizing: border-box
+            display: flex
+            width: 100%
+            position: fixed
+            padding: 20px 32px
+            left: 320px
+            border-top: 1px solid #e1e8f1
+            right: 0
+            bottom: 0
+            
+
+.select
+    position: relative
+    &__wrapper
+        position: relative
+
+        &.hide
+            display: none
+    &__button
+        width: 280px
+        height: 50px
+        font-size: 14px
+        box-sizing: border-box
+        line-height: 1.1
+        border: 1px solid transparent
+        color: #999
+        border-radius: 5px
+        padding: 15px 20px
+        background: #f7f8fc
+        text-align: left
+        display: flex
+        justify-content: space-between
+        align-items: center
+        cursor: pointer
+        margin-bottom: 5px
+        z-index: 1
+        position: relative
+        &:hover
+            background-color: #f0f2f9
+        &.active
+            border: 1px solid #e1e8f1
+            &:hover
+                background-color: #fff
+
+    &__dropdown
+        height: 170px
+        position: absolute
+        z-index: 2
+        border-radius: 5px
+        padding: 10px 0
+        max-width: 280px
+        width: 100%
+        display: block
+        background-color: #fff
+        overflow: hidden scroll
+        box-shadow: 0 -2px 24px rgba(0,0,0,.08)
+        &::-webkit-scrollbar
+            width: 0
+
+    &__item
+        padding: 8px 20px
+        font-size: 14px
+        color: #4a4a4a
+        line-height: 1.5
+        cursor: pointer
+        &:hover
+            background: #f4f9fd
+    &__icon
+        &.active
+            transform: rotate(180deg)
+    &__scrollbar
+        z-index: 2
+        position: absolute
+        right: 7px
+        width: 7px
+        top: 0
+        &_style
+            display: block
+            width: 100%
+            height: 54px
+            margin: 5px 5px 5px 0
+            background-color: rgba(105,116,129,.1)
+            border-radius: 20px
+            transition: all .25s ease
+            &:hover
+                background-color: rgba(105,116,129,.6)
+                height: 64px
+                margin: 0
+            &.active
+                background-color: rgba(105,116,129,.6)
+
+textarea[id="options"]
+    height: 210px
+    width: 580px
+    resize: none

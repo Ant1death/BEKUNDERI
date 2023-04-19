@@ -141,9 +141,97 @@
                     </a>
                 </div>
                 <div class="integration-btns">
-                    <button class="integration-btns__item active">Интеграция</button>
-                    <button class="integration-btns__item">Лимиты API</button>
+                    <button class="integration-btns__item active" id="integration-btns__integration">Интеграция</button>
+                    <button class="integration-btns__item" id="integration-btns__limitsAPI">Лимиты API</button>
                 </div>
+            <div class="integration-content open">
+            <div class="integration-wrapper">
+            <div class="select">
+                <button type="button" class="select__button">CRM-система
+                    <span class="select__icon">
+                    <svg data-v-7393e354="" data-v-6c6d937f="" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" aria-labelledby="chevronDown" role="presentation"><g data-v-7393e354="" fill="none"><path data-v-7393e354="" d="M4.505 5.784l-4.3-4.526a.764.764 0 010-1.042.676.676 0 01.99 0L5 4.22 8.805.216a.676.676 0 01.99 0 .765.765 0 010 1.042l-4.3 4.526A.68.68 0 015 6a.68.68 0 01-.495-.216z" fill="#9DA9B8" transform="translate(4,8)"></path></g></svg>
+                </span>
+                </button>
+                <div class="select__wrapper hide">
+                <ul class="select__dropdown">
+                    <li class="select__item">
+                        AmoCRM
+                    </li>
+                    <li class="select__item">
+                        Bitrix24
+                    </li>
+                    <li class="select__item">
+                        DIKIDI
+                    </li>
+                    <li class="select__item">
+                        iikoCard
+                    </li>
+                    <li class="select__item">
+                        iikoCard
+                    </li>
+                    <li class="select__item">
+                        iikoCard
+                    </li>
+                    <li class="select__item">
+                        Другое
+                    </li>
+                </ul>
+                <div class="select__scrollbar">
+                    <div class="select__scrollbar_style"></div>
+                    </div>
+            </div>
+            </div>
+            <div class="integration-status">
+                <span class="integration-status__circle"></span>
+                <p class="integration-status__text">Интеграция не настроена</p>
+             
+            </div>
+        </div>
+        <section class="integration-configure">
+            <h2 class="integration-configure__title">Свойства</h2>
+            <form action="">
+            <div class="integration-configure__form">
+                <div class="integration-configure__input integration-configure__input_server">
+                    <input type="text" name="server" id="server">
+                    <label for="server" class="integration-configure__label">Сервер</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_login">
+                    <input type="text" name="login" id="login">
+                    <label for="login" class="integration-configure__label">Логин</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_password">
+                    <input type="password" name="password" id="password">
+                    <label for="password" class="integration-configure__label">Пароль</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_id_organisation">
+                    <input type="text" name="id_organisation" id="id_organisation">
+                    <label for="id_organisation" class="integration-configure__label">ID организации</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_id_programm">
+                    <input type="text" name="id_programm" id="id_programm">
+                    <label for="id_programm" class="integration-configure__label">ID программы</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_id_wallet">
+                    <input type="text" name="id_wallet" id="id_wallet">
+                    <label for="id_wallet" class="integration-configure__label">ID кошелька</label>
+                </div>
+                <div class="integration-configure__input integration-configure__input_options">
+                    <textarea name="options" id="options" class="integration-configure__textarea" placeholder=" "></textarea>
+                    <label for="options" class="integration-configure__label">Дополнительные параметры</label>
+                </div>
+         
+            </div>
+            <div class="integration-configure__footer">
+            <button class="integration-configure__button"> Сохранить</button>
+            <button class="integration-configure__button white"> Проверить</button>
+            <div class="">
+                <input type="checkbox" name="checkbox" class="integration-configure__checkbox">
+                <label for="checkbox" class="integration-configure__checkbox-label">Выключено</label>
+            </div>
+            </div>
+        </form>
+        </section>
+    </div>
             </main>
         </div>
     </div>
