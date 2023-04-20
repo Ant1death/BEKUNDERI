@@ -111,6 +111,8 @@ function sw2() {
   }
   if (accessesNewBtn) {
     accessesNewBtn.addEventListener('click', e => {
+      let accessesUrl = window.location.href;
+      console.log(accessesUrl);
       sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
         title: 'Добавить пользователя',
         input: 'email',
@@ -138,7 +140,7 @@ function sw2() {
           console.log(formData);
           (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
             method: 'post',
-            url: '/accesses',
+            url: `${accessesUrl}`,
             headers: {},
             data: formData
           }).then(response => {

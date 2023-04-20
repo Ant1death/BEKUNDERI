@@ -107,6 +107,8 @@ function sw2() {
     }
     if(accessesNewBtn) {
       accessesNewBtn.addEventListener('click',(e) => {
+        let accessesUrl = window.location.href;
+        console.log(accessesUrl);
         Swal.fire({
           title: 'Добавить пользователя',
           input: 'email',
@@ -134,7 +136,7 @@ function sw2() {
               console.log(formData);
               axios({
                 method: 'post',
-                url: '/accesses',
+                url: `${accessesUrl}`,
                 headers: {}, 
                 data: formData
               }).then((response) => {
