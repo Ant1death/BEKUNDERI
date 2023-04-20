@@ -137,7 +137,9 @@ function sw2() {
               axios({
                 method: 'post',
                 url: `${accessesUrl}`,
-                headers: {}, 
+                headers: {
+                    'csrf_token': 'csrf_token'
+                }, 
                 data: formData
               }).then((response) => {
                 console.log(response);

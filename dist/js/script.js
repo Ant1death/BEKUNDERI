@@ -141,7 +141,9 @@ function sw2() {
           (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
             method: 'post',
             url: `${accessesUrl}`,
-            headers: {},
+            headers: {
+              'csrf_token': 'csrf_token'
+            },
             data: formData
           }).then(response => {
             console.log(response);
