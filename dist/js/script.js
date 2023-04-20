@@ -138,7 +138,7 @@ function sw2() {
           console.log(formData);
           (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
             method: 'post',
-            url: '/settings/accesses',
+            url: '/accesses',
             headers: {},
             data: formData
           }).then(response => {
