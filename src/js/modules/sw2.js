@@ -2,6 +2,9 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 
 function sw2() {
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    axios.defaults.xsrfCookieName = "csrftoken";
+    axios.defaults.withCredentials = true
     // попап выйти с устройств
     const exitDevice = document.querySelector('.general-item__devices');
     if(exitDevice) {
@@ -138,8 +141,9 @@ function sw2() {
                 method: 'post',
                 url: `${accessesUrl}`,
                 headers: {
-                    'csrf_token': 'csrf_token'
+                  "X-CSRFToken": csrfToken
                 }, 
+                xsrfHeaderName: "X-CSRFToken",
                 data: formData
               }).then((response) => {
                 console.log(response);

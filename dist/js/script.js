@@ -18,6 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function sw2() {
+  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.xsrfHeaderName = "X-CSRFTOKEN";
+  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.xsrfCookieName = "csrftoken";
+  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.withCredentials = true;
   // попап выйти с устройств
   const exitDevice = document.querySelector('.general-item__devices');
   if (exitDevice) {
@@ -142,8 +145,9 @@ function sw2() {
             method: 'post',
             url: `${accessesUrl}`,
             headers: {
-              'csrf_token': 'csrf_token'
+              "X-CSRFToken": csrfToken
             },
+            xsrfHeaderName: "X-CSRFToken",
             data: formData
           }).then(response => {
             console.log(response);
