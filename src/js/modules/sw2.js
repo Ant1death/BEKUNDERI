@@ -134,7 +134,7 @@ function sw2() {
               console.log(formData);
               axios({
                 method: 'post',
-                url: '/settings-accesses',
+                url: '/settings/accesses',
                 headers: {}, 
                 data: formData
               }).then((response) => {
