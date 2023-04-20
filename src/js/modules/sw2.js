@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2'
+import axios from 'axios';
 function sw2() {
     // попап выйти с устройств
     const exitDevice = document.querySelector('.general-item__devices');
