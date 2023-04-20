@@ -112,7 +112,6 @@ function sw2() {
           input: 'email',
           inputValue: '',
           inputPlaceholder: 'Введите email',
-          content: '',
           showCancelButton: true,
           confirmButtonText: 'Отправить',
           cancelButtonText: 'Отмена',

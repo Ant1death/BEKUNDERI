@@ -116,7 +116,6 @@ function sw2() {
         input: 'email',
         inputValue: '',
         inputPlaceholder: 'Введите email',
-        content: '',
         showCancelButton: true,
         confirmButtonText: 'Отправить',
         cancelButtonText: 'Отмена',
@@ -8589,16 +8588,20 @@ window.addEventListener('DOMContentLoaded', () => {
 const integrationContent = document.querySelector('.integration-content');
 const integrationButton = document.querySelector('#integration-btns__integration');
 const limitsApiButton = document.querySelector('#integration-btns__limitsAPI');
-limitsApiButton.addEventListener('click', () => {
-  integrationContent.classList.remove('open');
-  limitsApiButton.classList.add('active');
-  integrationButton.classList.remove('active');
-});
-integrationButton.addEventListener('click', () => {
-  integrationContent.classList.add('open');
-  integrationButton.classList.add('active');
-  limitsApiButton.classList.remove('active');
-});
+if (limitsApiButton) {
+  limitsApiButton.addEventListener('click', () => {
+    integrationContent.classList.remove('open');
+    limitsApiButton.classList.add('active');
+    integrationButton.classList.remove('active');
+  });
+}
+if (integrationButton) {
+  integrationButton.addEventListener('click', () => {
+    integrationContent.classList.add('open');
+    integrationButton.classList.add('active');
+    limitsApiButton.classList.remove('active');
+  });
+}
 
 //intergration select
 const selectItems = document.querySelectorAll('.select__item');
@@ -8607,40 +8610,46 @@ const selectButton = document.querySelector('.select__button');
 const selectIcon = document.querySelector('.select__icon');
 const integrationConfigure = document.querySelector('.integration-configure');
 const selectScrollbar = document.querySelector('.select__scrollbar');
-selectItems.forEach(item => {
-  item.addEventListener('click', () => {
-    //Пока просто показывают блок 'Свойства'
-    integrationConfigure.classList.add('open');
-    selectWrapper.classList.add('hide');
-    selectIcon.classList.remove('active');
-    selectButton.classList.remove('active');
+if (selectItems) {
+  selectItems.forEach(item => {
+    item.addEventListener('click', () => {
+      //Пока просто показывают блок 'Свойства'
+      integrationConfigure.classList.add('open');
+      selectWrapper.classList.add('hide');
+      selectIcon.classList.remove('active');
+      selectButton.classList.remove('active');
+    });
   });
-});
-selectButton.addEventListener('click', e => {
-  if (selectWrapper.classList.contains('hide')) {
-    selectWrapper.classList.remove('hide');
-    selectIcon.classList.add('active');
-    selectButton.classList.add('active');
-  } else {
-    selectWrapper.classList.add('hide');
-    selectIcon.classList.remove('active');
-    selectButton.classList.remove('active');
-  }
-});
-//let scrollPosition = 0
-selectWrapper.addEventListener('wheel', e => {
-  /*  const scroll = e.deltaY;
-    
-    if(scroll < 0 && scrollPosition >= 30) {
-        scrollPosition = scrollPosition - 30
-        console.log(scrollPosition)
-        selectScrollbar.style.top = scrollPosition +'px'
+}
+if (selectButton) {
+  selectButton.addEventListener('click', e => {
+    if (selectWrapper.classList.contains('hide')) {
+      selectWrapper.classList.remove('hide');
+      selectIcon.classList.add('active');
+      selectButton.classList.add('active');
+    } else {
+      selectWrapper.classList.add('hide');
+      selectIcon.classList.remove('active');
+      selectButton.classList.remove('active');
     }
-    else if (scrollPosition <= 90){
-        scrollPosition = scrollPosition + 30
-        selectScrollbar.style.top =scrollPosition +'px'
-    }     */
-});
+  });
+}
+if (selectWrapper) {
+  //let scrollPosition = 0
+  selectWrapper.addEventListener('wheel', e => {
+    /*  const scroll = e.deltaY;
+      
+      if(scroll < 0 && scrollPosition >= 30) {
+          scrollPosition = scrollPosition - 30
+          console.log(scrollPosition)
+          selectScrollbar.style.top = scrollPosition +'px'
+      }
+      else if (scrollPosition <= 90){
+          scrollPosition = scrollPosition + 30
+          selectScrollbar.style.top =scrollPosition +'px'
+      }     */
+  });
+}
 })();
 
 /******/ })()
