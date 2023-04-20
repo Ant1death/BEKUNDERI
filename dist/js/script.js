@@ -145,7 +145,9 @@ function sw2() {
             headers: {
               'X-CSRFTOKEN': csrfToken
             },
-            data: formData
+            data: {
+              email: formData
+            }
           }).then(response => {
             console.log(response);
           }).catch(error => {
