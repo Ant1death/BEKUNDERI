@@ -2,9 +2,9 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 
 function sw2() {
-    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
-    axios.defaults.xsrfCookieName = "csrftoken";
-    axios.defaults.withCredentials = true
+    // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    // axios.defaults.xsrfCookieName = "csrftoken";
+    // axios.defaults.withCredentials = true
     // попап выйти с устройств
     const exitDevice = document.querySelector('.general-item__devices');
     if(exitDevice) {
@@ -111,7 +111,6 @@ function sw2() {
     if(accessesNewBtn) {
       accessesNewBtn.addEventListener('click',(e) => {
         let accessesUrl = window.location.href;
-        console.log(accessesUrl);
         Swal.fire({
           title: 'Добавить пользователя',
           input: 'email',
@@ -140,10 +139,7 @@ function sw2() {
               axios({
                 method: 'post',
                 url: `${accessesUrl}`,
-                headers: {
-                  "X-CSRFToken": csrfToken
-                }, 
-                xsrfHeaderName: "X-CSRFToken",
+                headers: {},
                 data: formData
               }).then((response) => {
                 console.log(response);

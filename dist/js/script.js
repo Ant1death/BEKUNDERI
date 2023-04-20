@@ -18,9 +18,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function sw2() {
-  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.xsrfHeaderName = "X-CSRFTOKEN";
-  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.xsrfCookieName = "csrftoken";
-  axios__WEBPACK_IMPORTED_MODULE_1__["default"].defaults.withCredentials = true;
+  // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+  // axios.defaults.xsrfCookieName = "csrftoken";
+  // axios.defaults.withCredentials = true
   // попап выйти с устройств
   const exitDevice = document.querySelector('.general-item__devices');
   if (exitDevice) {
@@ -115,7 +115,6 @@ function sw2() {
   if (accessesNewBtn) {
     accessesNewBtn.addEventListener('click', e => {
       let accessesUrl = window.location.href;
-      console.log(accessesUrl);
       sweetalert2__WEBPACK_IMPORTED_MODULE_0___default().fire({
         title: 'Добавить пользователя',
         input: 'email',
@@ -144,10 +143,7 @@ function sw2() {
           (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
             method: 'post',
             url: `${accessesUrl}`,
-            headers: {
-              "X-CSRFToken": csrfToken
-            },
-            xsrfHeaderName: "X-CSRFToken",
+            headers: {},
             data: formData
           }).then(response => {
             console.log(response);
