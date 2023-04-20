@@ -18,6 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function sw2() {
+  let csrftoken = getCookie('csrftoken');
   // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
   // axios.defaults.xsrfCookieName = "csrftoken";
   // axios.defaults.withCredentials = true
@@ -143,7 +144,11 @@ function sw2() {
           (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
             method: 'post',
             url: `${accessesUrl}`,
-            headers: {},
+            headers: {
+              headers: {
+                'X-CSRFToken': csrftoken
+              }
+            },
             data: formData
           }).then(response => {
             console.log(response);

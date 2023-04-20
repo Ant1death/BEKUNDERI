@@ -2,6 +2,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 
 function sw2() {
+    let csrftoken = getCookie('csrftoken');
     // axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
     // axios.defaults.xsrfCookieName = "csrftoken";
     // axios.defaults.withCredentials = true
@@ -139,7 +140,9 @@ function sw2() {
               axios({
                 method: 'post',
                 url: `${accessesUrl}`,
-                headers: {},
+                headers: {
+                  headers: {'X-CSRFToken': csrftoken},
+                },
                 data: formData
               }).then((response) => {
                 console.log(response);
