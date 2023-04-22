@@ -8378,7 +8378,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (item.value.length > 0) {
         item.classList.add('focusedInput');
       }
-      item.addEventListener('input', () => {
+      item.addEventListener('input', e => {
         if (item.value.length > 0) {
           item.classList.add('focusedInput');
         } else {
@@ -8655,6 +8655,130 @@ if (selectWrapper) {
       }     */
   });
 }
+
+//finance page
+//tabs
+const financeTabs = document.querySelectorAll('.finance-tabs');
+const tabsTarif = document.querySelector('#tabs-btns__tarif');
+const tabsContract = document.querySelector('#tabs-btns__contract');
+const tabsTransaction = document.querySelector('#tabs-btns__transaction');
+const tabsPayment = document.querySelector('#tabs-btns__payment');
+const tabsReferral = document.querySelector('#tabs-btns__referral');
+
+//blocks on page Finance
+const blocksFinance = document.querySelectorAll('.finance');
+const blockFinanceTarif = document.querySelector('.finance-wrapper');
+const blockFinanceContract = document.querySelector('.finance-block__contract');
+const blockFinanceTransaction = document.querySelector('.finance-block-transaction');
+const blockFinancePayments = document.querySelector('.finance-block-payments');
+const blockFinanceReferall = document.querySelector('.finance-block-referall');
+
+//inputs 
+const inputForRefLink = document.querySelector('#ref_link');
+const inputTarifForPay = document.querySelector('#sum_for_pay');
+const inputFinancePayer = document.querySelector('#finance-payer');
+
+//buttons
+const shortcats = document.querySelectorAll('.finance-block__shortcat');
+const buttonsTarif = document.querySelectorAll('.finance-block__button');
+const buttonFinancePayOnline = document.querySelector('#button-finance-pay-online');
+const buttonFinanceIssueAnInvoice = document.querySelector('#button-finance-issue-an-invoice');
+const buttonsPopupCancel = document.querySelectorAll('.popup-button-cancel');
+const buttonsPopupExit = document.querySelectorAll('.popup__header-exit');
+const buttonCopyReferralLink = document.querySelector('.finance-block-referall__icon');
+
+//message validation
+const messageRequired = document.querySelector('.input-message__required');
+
+//popups
+const popupFinancePayOnline = document.querySelector('.popup_pay_online');
+const popupIssueAnInvoice = document.querySelector('.popup_issue_an_invoice');
+if (inputFinancePayer) {
+  inputFinancePayer.addEventListener('input', e => {
+    if (e.target.value.length === 0) {
+      inputFinancePayer.classList.remove('focusedInput'); //Добавляю вручную так как не срабатывает основная
+    } else {
+      inputFinancePayer.classList.add('focusedInput');
+    }
+  });
+}
+if (inputForRefLink) {
+  buttonCopyReferralLink.addEventListener('click', e => {
+    navigator.clipboard.writeText(inputForRefLink.value);
+  });
+}
+if (buttonFinancePayOnline) {
+  buttonFinancePayOnline.addEventListener('click', e => {
+    popupFinancePayOnline.classList.add('open');
+  });
+}
+if (buttonFinanceIssueAnInvoice) {
+  buttonFinanceIssueAnInvoice.addEventListener('click', e => {
+    popupIssueAnInvoice.classList.add('open');
+  });
+}
+if (buttonsPopupExit) {
+  buttonsPopupExit.forEach(button => {
+    button.addEventListener('click', () => {
+      popupFinancePayOnline.classList.remove('open');
+      popupIssueAnInvoice.classList.remove('open');
+    });
+  });
+}
+if (buttonsPopupCancel) {
+  buttonsPopupCancel.forEach(button => {
+    button.addEventListener('click', () => {
+      popupFinancePayOnline.classList.remove('open');
+      popupIssueAnInvoice.classList.remove('open');
+    });
+  });
+}
+if (inputTarifForPay) {
+  inputTarifForPay.addEventListener('input', e => {
+    console.log(e.target);
+    if (e.target.value.match(/[^0-9]/g)) {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "");
+    }
+    if (e.target.value.length === 0) {
+      e.target.classList.add('required');
+      e.target.classList.remove('focusedInput');
+      messageRequired.classList.add('active');
+      buttonsTarif.forEach(button => button.classList.add('disabled'));
+    } else {
+      e.target.classList.remove('required');
+      e.target.classList.add('focusedInput');
+      messageRequired.classList.remove('active');
+      buttonsTarif.forEach(button => button.classList.remove('disabled'));
+    }
+  });
+}
+if (shortcats) {
+  shortcats.forEach(shortcat => {
+    shortcat.addEventListener('click', e => {
+      shortcats.forEach(item => {
+        item.classList.remove('active');
+      });
+      e.target.classList.add('active');
+    });
+  });
+}
+const tabsFinanceChange = (currentButton, currentBlock, blocks, tabs) => {
+  currentButton.addEventListener('click', () => {
+    blocks.forEach(block => {
+      block.classList.remove('active');
+    });
+    tabs.forEach(block => {
+      block.classList.remove('active');
+    });
+    currentButton.classList.add('active');
+    currentBlock.classList.add('active');
+  });
+};
+if (tabsTarif) tabsFinanceChange(tabsTarif, blockFinanceTarif, blocksFinance, financeTabs);
+if (tabsContract) tabsFinanceChange(tabsContract, blockFinanceContract, blocksFinance, financeTabs);
+if (tabsTransaction) tabsFinanceChange(tabsTransaction, blockFinanceTransaction, blocksFinance, financeTabs);
+if (tabsPayment) tabsFinanceChange(tabsPayment, blockFinancePayments, blocksFinance, financeTabs);
+if (tabsReferral) tabsFinanceChange(tabsReferral, blockFinanceReferall, blocksFinance, financeTabs);
 })();
 
 /******/ })()

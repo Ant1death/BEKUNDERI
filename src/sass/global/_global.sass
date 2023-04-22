@@ -2,10 +2,12 @@ input.focusedInput
     ~label
         top: 0
         font-size: 12px
+
 textarea.focusedInput
     ~label
         top: 0
         font-size: 12px
+
 .copy-btn
     display: flex
     align-items: center
@@ -21,11 +23,25 @@ input[type="text"], textarea
     border-color: #f7f8fc
     box-shadow: none
     border-radius: 5px
+    &.required
+        color: #ff3b30
+        background: #fff5f4
+        border: 1px solid #f14668
     &:focus
         background: #ffff
         ~label
             top: 0
             font-size: 12px
+.input-message //Добавляет красное предупреждение под инпутом, что поле обязательно для ввода
+    &__required 
+        display: none
+        align-items: center
+        margin-top: 4px
+        &.active 
+            display: flex
+        &-text
+            padding: 0 0 0 5px
+            color: #ff6464
 input[type="password"]
     width: 100%
     height: 50px
@@ -85,6 +101,28 @@ label
 .button
     border-width: 1px
     border-radius: 4px
+    transition: all .15s ease
+    &.blue
+        color: #fff
+        background-color: #017cff
+        border: 1px solid transparent
+        padding: 17px 17.5px
+        line-height: 1
+        &:hover
+            background-color: #0074f2
+    &.white
+        color: #007aff
+        background-color: #fff
+        border: 1px solid #007aff
+        &:hover
+            background: rgba(0,122,255,.1)
+    &.light
+        background-color: #f3f6f9
+        border-color: transparent
+        color: rgba(0,0,0,.7)
+        &:hover
+            background-color: #ebf0f5
+
 .modal-btn
     color: #007aff
     text-decoration: none
@@ -97,3 +135,22 @@ button.disabled
 .is-link
     color: #007aff
     text-decoration: none
+
+.tabs
+    &-btns
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        &__item
+            border: 1px solid #e1e8f1
+            border-right: none
+            line-height: 1
+            color: #697481
+            padding: 8px 11px
+            transition: all .15s ease
+            &:hover  
+                background: rgba(0,122,255,.1)
+            &.active
+                color: #007aff
+            &:last-child
+                border-right: 1px solid #e1e8f1
