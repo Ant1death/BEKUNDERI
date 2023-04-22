@@ -1,0 +1,411 @@
+.finance
+  &-wrapper
+    display: flex
+    max-width: 880px
+    width: 100%
+    justify-content: space-between
+    display: none
+    &.active
+      display: flex
+  &-block
+    box-sizing: border-box
+    width: 100%
+    border: 1px solid #e1e8f1
+    border-radius: 3px
+
+    input[type="text"]
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+
+      &:hover:not(.required)
+        border-radius: 5px
+        border: 1px solid #e1e8f1   
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+      &:focus:not(.required)
+        border: 1px solid #e1e8f1   
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+    &__header
+      border-bottom: 1px solid #e1e8f1
+      padding: 20px 30px
+      display: flex
+      justify-content: space-between
+    &__title
+      font-size: 18px
+      line-height: 1
+
+    &__footnote
+      padding: 15px
+      padding-bottom: 0
+      font-size: 14px
+      height: 93px
+      overflow: hidden
+      text-overflow: ellipsis
+      margin-bottom: 13px
+    &__subtitle
+      margin-left: 4px
+      font-weight: 700
+      font-size: 18px
+      line-height: 1
+    &__item
+      border-bottom: 1px solid #e1e8f1
+      padding: 15px
+      font-size: 14px
+      display: flex
+      justify-content: space-between
+      overflow: hidden
+      text-overflow: ellipsis
+      &:nth-child(2n-1)
+        background: #f7f8fc
+    &__link
+      color: #007aff
+      font-size: 18px
+      line-height: 1
+    &__count
+      font-weight: 700
+    &__span
+      display: block
+    &__label
+      position: absolute
+      top: 12px
+      left: 0
+      width: 100%
+      padding: 1px 21px 0
+      overflow: hidden
+      color: #999
+      text-overflow: ellipsis
+      white-space: nowrap
+      pointer-events: none
+      transition: all .25s ease
+      font-size: 14px
+      line-height: 20px
+      font-weight: 400
+    &__container
+      &-input
+        display: flex
+        max-width: 340px
+        width: 100%
+        height: 50px
+    &__input
+      box-sizing: border-box
+      border: 1px solid transparent
+      display: flex
+      align-items: center
+      position: relative
+      width: 100%
+      max-width: 266px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      &-append
+        width: 75px
+        height: 50px
+        padding: 17px 20px
+        font-size: 1rem
+        color: #343434
+        background: #f7f8fc
+        border-color: #f7f8fc
+        border-radius: 0
+        border-top-right-radius: 4px
+        border-bottom-right-radius: 4px
+        margin-left: -1px
+    &-mb20
+      margin-bottom: 20px
+
+    &-special
+      &-offers
+        height: 380px
+    &-tarif
+      max-width: 428px
+      width: 100%
+    &-payments
+      display: none
+      &.active
+        display: block
+    &__form
+      &-container
+        padding: 12px 30px 12px 30px
+      &-title
+        margin-bottom: 16px
+    &__shortcats
+      font-size: 12px
+      display: flex
+      margin: 0
+      margin-top: 5px
+      max-width: 340px
+      width: 100%
+      justify-content: space-between
+    &__shortcat
+      color: #007aff
+      border-bottom: 1px dashed #007aff
+      cursor: pointer
+      font-size: 12px
+      &.active
+        border-bottom: none
+        color: #000
+    &__buttons
+      margin-top: 22px
+      display: flex
+      justify-content: space-between
+      position: relative
+
+    &__button
+      width: 160px
+      &-first
+        margin-right: 7px
+      &-text
+        margin-top: 12px
+        font-size: 12px
+        color: #697481
+        text-align: center
+      &-icon
+        padding-top: 18px
+        cursor: pointer
+        &:hover
+          &::before
+            content: 'Закрывающие документы при оплате счета формируются на фактического плательщика.'
+            position: absolute
+            color: #fff
+            background-color: #6f6f7c
+            border-radius: 5px
+            box-sizing: border-box
+            padding: 12px 14px
+            width: 269px
+            top: -43px
+            right: -124px
+            font-size: 12px
+            line-height: 1.3
+          &::after
+              content:" "
+              position: absolute
+              bottom: 65px
+              right: 3px
+              margin-left: -5px
+              width: 0
+              border-top: 5px solid #6f6f7c
+              border-right: 5px solid transparent
+              border-left: 5px solid transparent 
+              font-size: 0
+              line-height: 0
+    &__contract
+      display: none
+      &.active
+        display: block
+      &-wrapper    //tabs Договор
+        height: calc(100vh - 246px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        min-height: 300px
+        overflow: hidden scroll
+      &-block
+        max-width: 760px
+      &-footer
+        padding: 20px 30px
+        font-size: 14px
+        color: #858585
+        border-top: 1px solid #e1e8f1
+    &-transaction //tabs Транзакции
+      display: none
+      &.active
+        display: block
+
+    &__transaction 
+      &-input
+        margin: 0 8px
+        width: 150px
+        height: 34px
+        box-sizing: border-box
+        padding: 8px 10px
+        color: #697481
+        text-align: center
+        border: 1px solid #e1e8f1
+        outline: none
+        border-radius: 5px
+        cursor: pointer
+        &:hover
+          background: #fafafa
+      &-price
+        margin-left: 8px
+    &__date 
+      margin-bottom: 20px
+      font-size: 14px
+    &-referall
+      display: none
+      &.active
+        display: block
+      &__title
+        font-size: 18px
+        line-height: 29px
+      &__subtitle
+        margin: 20px 0    
+      &__input
+        max-width: 360px
+        margin-right: 20px
+      &__form
+        display: flex
+        position: relative
+      &__button
+        padding: 17px 17.5px
+        line-height: 1
+        box-sizing: border-box
+        height: 50px
+      &__icon
+        position: absolute
+        left: 327px
+        top: 17px
+        cursor: pointer
+      &__promocode
+        margin-top: 15px
+      &__footnote
+        margin-top: 8px
+        margin-bottom: 25px
+        font-size: 12px
+        line-height: 16px
+        color: rgba(52,52,52,.5)
+        max-width: 385px
+      &__link
+        color: #007aff
+        text-decoration: none
+        transition: all .25s easy
+        &:hover
+          color: #4aa2ff
+.table-item
+  &-transaction, &-payments
+    position: relative
+    font-size: 16px
+    border-collapse: collapse
+    background-color: #fff
+    width: 100%
+    max-width: 100%
+    table-layout: auto
+    &__span
+      width: 14px
+      height: 14px
+      position: absolute
+      top: 18px
+      left:53px
+      cursor: pointer
+
+    &:nth-child(2n)
+      background-color: #f7f8fc
+    &__th
+      padding: 15px 10px 15px 20px
+      text-align: left
+      font-size: 14px
+      font-weight: 400
+      line-height: 19px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      color: #606266
+      &.header
+        color: #697481     
+      &:first-child     
+        min-width: 150px
+        max-width: 150px
+        width: 150px
+      &:nth-child(2)
+        min-width: 400px
+        max-width: 400px
+        width: 400px
+      &:nth-child(3)
+        padding: 14px 25px 14px 5px
+        min-width: 130px
+        max-width: 130px
+        width: 130px
+        text-align: right
+  &-payments //tabs Платежи и акты
+    &__th
+      &:first-child, &:nth-child(5)
+        min-width: 130px
+        max-width: 130px
+        width: 130px
+      &:nth-child(2)
+        min-width: 160px
+        max-width: 160px
+        width: 160px
+        text-align: right
+        padding: 14px 25px 14px 5px
+      &:nth-child(3), &:nth-child(4)
+        min-width: 280px
+        max-width: 280px
+        width: 280px
+        text-align: left
+
+.table-wrapper
+  overflow-x: scroll !important //добавить медиазапрос
+  width: 400px
+  &-transaction
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    overflow: hidden scroll
+    margin-bottom: 4px !important
+.table-pagination
+  &-transaction
+    border: 1px solid #dcdfe6
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    border-top: none
+
+.popup
+
+  justify-content: center
+  align-items: center
+  background-color: rgba(0,0,0,.4)
+  height: 100vh
+  width: 100vw
+  z-index: 3
+  position: absolute
+  right: 0
+  bottom: 0
+  top: 0
+  left: 0
+  display: none
+
+  
+  &.open
+    display: flex
+  &__container
+    width: 430px
+    background-color: #fff
+    border-radius: 5px
+    padding: 20px 30px
+    box-sizing: border-box
+    position: relative
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-exit
+      width: 14px
+      height: 14px
+      svg
+        width: 14px
+        height: 14px
+
+  &__title
+    line-height: 24px
+    font-size: 18px
+    color: #343434
+  &__button
+    height: 50px
+    padding: 17px 17.5px
+    line-height: 1
+    &:last-child
+      margin-left: 20px
+  &__icon
+    cursor: pointer
+    padding: 2px 0 0
+  &__body
+    padding: 20px 0
+  &__text
+    font-size: 12px
+    color: rgba(52,52,52,.5)
+  &-input
+    &-payer
+      margin: 10px 0
+    &__finance-payer
+      min-width: 370px
+
+  

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="app-aside">
+            <div class="aside__menu">
+                <div class="aside__content">
+                    <a href='/index.html' class="aside__logo">
+                        <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="115" height="40"
+                            viewBox="0 0 100 25" aria-labelledby="logoCardpr" role="presentation">
+                            <g data-v-7393e354="" fill="none">
+                                <g data-v-7393e354="">
+                                    <path
+                                        d="M0 2.5C0 1.11929 1.11929 0 2.5 0H21.5C22.8807 0 24 1.11929 24 2.5V21.5C24 22.8807 22.8807 24 21.5 24H2.5C1.11929 24 0 22.8807 0 21.5V2.5Z"
+                                        fill="#007AFF"></path>
+                                    <path
+                                        d="M8.61801 13.4004C11.334 13.4004 13.276 11.7504 13.4002 9.24611H10.8229C10.655 10.48 9.80076 11.2539 8.62531 11.2539C7.15056 11.2539 6.23061 10.0055 6.23061 7.93926C6.23061 5.89501 7.15786 4.64654 8.61801 4.64654C9.79346 4.64654 10.6769 5.46426 10.8083 6.70541H13.3856C13.3052 4.21578 11.2829 2.50006 8.61801 2.50006C5.47861 2.50006 3.50006 4.50783 3.50006 7.94656C3.50006 11.3926 5.46401 13.4004 8.61801 13.4004Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M17.9764 13.0933H20.8238L17.2829 2.55811H14.0047L10.4637 13.0933H13.1943L13.866 10.779H17.312L17.9764 13.0933ZM15.5598 4.79219H15.6182L16.7863 8.85149H14.3843L15.5598 4.79219Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M6.28807 12.6547H7.85047C8.80692 12.6547 9.42752 13.2606 9.42752 14.1587C9.42752 15.0713 8.84342 15.6481 7.85777 15.6481H6.28807V12.6547ZM6.28807 17.4806H7.65337L9.46397 21.1675H12.472L10.362 17.0864C11.5156 16.5826 12.1654 15.3998 12.1654 14.1075C12.1654 11.9319 10.749 10.6323 8.12062 10.6323H3.60864V21.1675H6.28807V17.4806Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M12.0446 10.6323V21.1675H16.323C19.4989 21.1675 21.3752 19.2036 21.3752 15.8379C21.3752 12.4794 19.5062 10.6323 16.323 10.6323H12.0446ZM14.724 12.7934H15.9725C17.6663 12.7934 18.6519 13.8666 18.6519 15.8452C18.6519 17.9479 17.7174 19.0065 15.9725 19.0065H14.724V12.7934Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M37.0995 17.4C39.7426 17.4 41.5868 15.897 41.8407 13.5246H39.6456C39.4066 14.7845 38.4435 15.5581 37.107 15.5581C35.3823 15.5581 34.2996 14.1582 34.2996 11.8889C34.2996 9.64919 35.3972 8.24197 37.0995 8.24197C38.4136 8.24197 39.429 9.09661 39.6381 10.4007H41.8332C41.6615 8.02092 39.6903 6.40002 37.0995 6.40002C33.9786 6.40002 32 8.47036 32 11.8963C32 15.3297 33.9637 17.4 37.0995 17.4ZM49.9193 17.2158H52.316L48.5679 6.58422H45.9173L42.1767 17.2158H44.4912L45.3125 14.6371H49.098L49.9193 17.2158ZM47.1791 8.61769H47.2314L48.6127 12.972H45.7978L47.1791 8.61769ZM55.6759 8.32297H57.5949C58.7145 8.32297 59.4168 8.98608 59.4168 10.0176C59.4168 11.0712 58.7522 11.7121 57.6173 11.7121H55.6759V8.32297ZM55.6759 13.3256H57.483L59.4911 17.2158H62.0447L59.775 12.9941C61.0142 12.5152 61.7312 11.3364 61.7312 9.97334C61.7312 7.87358 60.3124 6.58422 57.8336 6.58422H53.421V17.2158H55.6759V13.3256ZM63.2172 6.58422V17.2158H67.331C70.564 17.2158 72.4678 15.2339 72.4678 11.8595C72.4678 8.48507 70.564 6.58422 67.331 6.58422H63.2172ZM65.4715 8.41878H67.0623C69.048 8.41878 70.1681 9.64181 70.1681 11.8669C70.1681 14.1656 69.078 15.3739 67.0623 15.3739H65.4715V8.41878ZM73.9237 6.58422V17.2158H76.1786V13.8635H78.1943C80.4645 13.8635 82.0395 12.4047 82.0395 10.2239C82.0395 8.03563 80.5164 6.58422 78.3062 6.58422H73.9237ZM76.1786 8.34512H77.7093C79.0009 8.34512 79.7474 9.02294 79.7474 10.2313C79.7474 11.4469 78.9933 12.1247 77.7017 12.1247H76.1786V8.34512ZM85.6307 8.32297H87.5497C88.6698 8.32297 89.3716 8.98608 89.3716 10.0176C89.3716 11.0712 88.7069 11.7121 87.5721 11.7121H85.6307V8.32297ZM85.6307 13.3256H87.4378L89.4464 17.2158H92L89.7298 12.9941C90.9695 12.5152 91.686 11.3364 91.686 9.97334C91.686 7.87358 90.2677 6.58422 87.7889 6.58422H83.3763V17.2158H85.6307V13.3256Z"
+                                        fill="#007AFF"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="aside__links">
+                        <ul class="aside__links-wrapper">
+                            <li class="aside__links-item active">
+                                <a href='/shablonKarts.html'>
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Шаблоны карт</span>
+
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Интеграция</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Выдача карт</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Прием карт</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Push-сообщения</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Триггеры</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Сегменты</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Клиенты</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Финансы</span>
+                                </a>
+                            </li>
+                            <li class="aside__links-item">
+                                <a href="/integration.html">
+                                    <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 16 16" aria-labelledby="mail" role="presentation"
+                                        class="main-menu_menuLinksIcon_11SMy">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354=""
+                                                d="M13.3333 2.66699H2.66659C1.93325 2.66699 1.33992 3.26699 1.33992 4.00033L1.33325 12.0003C1.33325 12.7337 1.93325 13.3337 2.66659 13.3337H13.3333C14.0666 13.3337 14.6666 12.7337 14.6666 12.0003V4.00033C14.6666 3.26699 14.0666 2.66699 13.3333 2.66699ZM13.3333 12.0003H2.66659V5.33366L7.99992 8.66699L13.3333 5.33366V12.0003ZM7.99992 7.33366L2.66659 4.00033H13.3333L7.99992 7.33366Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <span>Настройки</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="aside__footer"></div>
+                </div>
+            </div>
+        </aside>
+        <div class="app-main">
+            <header class="app-header">
+                <div class="app-header__status">
+                    <div class="app-header__status-item active">
+                        <span class="status-item__circle"></span>
+                        <div class="status-item__info">
+                            <a href="#">CARDPR</a>
+                            <span> 14 дней </span>
+                        </div>
+                    </div>
+                    <div class="app-header__status-item">
+                        <span class="status-item__circle"></span>
+                        <div class="status-item__info">
+                            <a href="#">CARDPR</a>
+                            <span> 14 дней </span>
+                        </div>
+                    </div>
+                    <div class="app-header__status-item">
+                        <span class="status-item__circle"></span>
+                        <div class="status-item__info">
+                            <a href="#">CARDPR</a>
+                            <span> 14 дней </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__wrapper">
+                    <span class="app-header__name"> Элеонора Хулузаури </span>
+                    <a href="#" class="app-header__logout">
+                        <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 -2 16 16" aria-labelledby="quit" role="presentation">
+                            <g data-v-7393e354="" fill="none">
+                                <path data-v-7393e354=""
+                                    d="M4.85504 5.13333C5.11504 5.39333 5.11504 5.80667 4.85504 6.06667L3.58837 7.33333H9.72171C10.0884 7.33333 10.3884 7.63333 10.3884 8C10.3884 8.36667 10.0884 8.66667 9.72171 8.66667H3.58837L4.85504 9.93333C5.11504 10.1933 5.11504 10.6067 4.85504 10.8667C4.59504 11.1267 4.18171 11.1267 3.92171 10.8667L1.52837 8.47333C1.26837 8.21333 1.26837 7.79333 1.52837 7.53333L3.92171 5.13333C4.18171 4.87333 4.59504 4.87333 4.85504 5.13333ZM13.3334 12.6667H8.66671C8.30004 12.6667 8.00004 12.9667 8.00004 13.3333C8.00004 13.7 8.30004 14 8.66671 14H13.3334C14.0667 14 14.6667 13.4 14.6667 12.6667V3.33333C14.6667 2.6 14.0667 2 13.3334 2H8.66671C8.30004 2 8.00004 2.3 8.00004 2.66667C8.00004 3.03333 8.30004 3.33333 8.66671 3.33333H13.3334V12.6667Z"
+                                    fill="#FF3B30"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+            </header>
+            <main class="app-content app-content-finance">
+                <div class="breadcrumb">
+                    <span>кабинет — (страница)</span>
+                    <a href="#" class="docs-link">Документация
+                        <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="-3 0 18 15" aria-labelledby="doc" role="presentation"
+                            class="_base-doc-link_icon_3-mpi">
+                            <g data-v-7393e354="" fill="none">
+                                <path data-v-7393e354="" fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M3 3.5C3 2.67186 3.67186 2 4.5 2H9.5H9.70711L9.85355 2.14645L12.8536 5.14645L13 5.29289V5.5V12.5C13 13.3281 12.3281 14 11.5 14H4.5C3.67186 14 3 13.3281 3 12.5V3.5ZM4.5 3C4.22414 3 4 3.22414 4 3.5V12.5C4 12.7759 4.22414 13 4.5 13H11.5C11.7759 13 12 12.7759 12 12.5V6H9.5H9V5.5V3H4.5ZM10 3.70711L11.2929 5H10V3.70711ZM9.5 8H6.5V9H9.5V8ZM6.5 10H6V11H6.5H8.5H9V10H8.5H6.5Z"
+                                    fill="#007AFF"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="tabs-btns">
+                    <button class="tabs-btns__item finance-tabs active" id="tabs-btns__tarif">Тариф</button>
+                    <button class="tabs-btns__item finance-tabs" id="tabs-btns__contract">Договор</button>
+                    <button class="tabs-btns__item finance-tabs" id="tabs-btns__transaction">Транзакции</button>
+                    <button class="tabs-btns__item finance-tabs" id="tabs-btns__payment">Платежи и акты</button>
+                    <button class="tabs-btns__item finance-tabs" id="tabs-btns__referral">Реферальная программа</button>
+                </div>
+
+                <!--tabs Тариф -->
+                <section class="finance finance-wrapper active">
+                    <div class="finance-block finance-block-special-offers finance-block-tarif">
+                        <div class="finance-block__header">
+                            <h3 class="finance-block__title">Специальные предложения</h3>
+                        </div>
+                        <ul class="finance-block__list">
+                            <li class="finance-block__item">
+                                <p><span class="finance-block__span">Оплата за 3 месяца:</span>
+
+                                    приветственные или реферальные промокоды на месяц
+                                </p>
+                            </li>
+                            <li class="finance-block__item">
+                                <p><span class="finance-block__span">Оплата за 6 месяцев:</span>
+
+                                    web-push или telegram-рассылки на месяц
+                                </p>
+                            </li>
+                            <li class="finance-block__item">
+                                <p> <span class="finance-block__span">Оплата за 12 месяцев:</span>
+
+                                    дополнительный месяц тарифа
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="finance-block__footnote">
+                            Специальные предложения действуют только для клиентов на актуальных тарифах. После оплаты
+                            обратитесь в техподдержку для активации спецпредложения.
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="finance-block finance-block-mb20 finance-block-tarif">
+                            <div class="finance-block__header">
+                                <h3 class="finance-block__title">Баланс:
+                                    <span class="finance-block__subtitle">13 625.45 ₽ (18 дней)</span>
+                                </h3>
+                            </div>
+                            <div class="finance-block__form-container">
+                                <p class="finance-block__form-title">Пополнить баланс:</p>
+                                <form action="" class="finance-block__form">
+                                    <div class="finance-block__container-input">
+                                        <div class="finance-block__input">
+                                            <input type="text" name="sum_for_pay" id="sum_for_pay" class="focusedInput"
+                                                value="60000">
+                                            <label for="sum_for_pay" class="finance-block__label">Сумма для
+                                                оплаты</label>
+                                        </div>
+                                        <span class="finance-block__input-append">.00 ₽</span>
+                                    </div>
+                                    <div class="input-message__required"><svg data-v-7393e354=""
+                                            xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="-2 0 18 12" aria-labelledby="danger-mark" role="presentation"
+                                            class="input-validation-messages_icon_2CAiE">
+                                            <g data-v-7393e354="" fill="none">
+                                                <g data-v-7393e354="">
+                                                    <path d="M6 9.457a.586.586 0 100-1.172.586.586 0 000 1.172z"
+                                                        fill="#FF3B30"></path>
+                                                    <path
+                                                        d="M6 0C2.684 0 0 2.684 0 6s2.684 6 6 6 6-2.684 6-6-2.684-6-6-6zm0 11.063A5.06 5.06 0 01.937 6 5.06 5.06 0 016 .937 5.06 5.06 0 0111.063 6 5.06 5.06 0 016 11.063z"
+                                                        fill="#FF3B30"></path>
+                                                    <path
+                                                        d="M5.531 7.031V3.47a.469.469 0 11.938 0v3.56a.469.469 0 11-.938 0z"
+                                                        fill="#FF3B30"></path>
+                                                </g>
+                                            </g>
+                                        </svg><span class="input-message__required-text"> Данное поле
+                                            обязательно.</span></div>
+
+                                    <ul class="finance-block__shortcats">
+                                        <li class="finance-block__shortcat active">3 месяца</li>
+                                        <li class="finance-block__shortcat">6 месяцев</li>
+                                        <li class="finance-block__shortcat">9 месяцев</li>
+                                        <li class="finance-block__shortcat">12 месяцев</li>
+                                    </ul>
+                                    <div class="finance-block__buttons">
+                                        <div class="finance-block__button-first">
+                                            <button type="button" class="button blue finance-block__button"
+                                                id="button-finance-pay-online">Оплатить
+                                                онлайн</button>
+                                            <p class="finance-block__button-text">Комиссия от 3.9%</p>
+                                        </div>
+
+                                        <div>
+                                            <button type="button" class="button blue finance-block__button"
+                                                id="button-finance-issue-an-invoice">Выставить
+                                                счет</button>
+                                            <p class="finance-block__button-text">Без комиссии</p>
+                                        </div>
+                                        <span class="finance-block__button-icon">
+                                            <svg data-v-7393e354="" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" viewBox="0 0 16 16" aria-labelledby="question"
+                                                role="presentation" data-original-title="null"
+                                                class="create-payment_icon_3Qjp_" data-cy="save-bill-tooltip-icon">
+                                                <g data-v-7393e354="" fill="none">
+                                                    <g data-v-7393e354="">
+                                                        <path
+                                                            d="M7.99496 1.32999C4.3114 1.32999 1.32996 4.31093 1.32996 7.99499C1.32996 11.6785 4.3109 14.66 7.99496 14.66C11.6785 14.66 14.66 11.679 14.66 7.99499C14.66 4.31143 11.679 1.32999 7.99496 1.32999ZM7.99496 13.6186C4.88696 13.6186 2.37136 11.1034 2.37136 7.99499C2.37136 4.88699 4.88654 2.37139 7.99496 2.37139C11.103 2.37139 13.6185 4.88657 13.6185 7.99499C13.6185 11.103 11.1034 13.6186 7.99496 13.6186Z"
+                                                            fill="#9DA9B8"></path>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M6 6.5C6 5.3972 6.8972 4.5 8 4.5C9.1028 4.5 10 5.3972 10 6.5C10 7.43023 9.36165 8.21415 8.5 8.43672V9.25C8.5 9.52615 8.27615 9.75 8 9.75C7.72385 9.75 7.5 9.52615 7.5 9.25V8C7.5 7.72385 7.72385 7.5 8 7.5C8.5514 7.5 9 7.0514 9 6.5C9 5.9486 8.5514 5.5 8 5.5C7.4486 5.5 7 5.9486 7 6.5C7 6.77615 6.77615 7 6.5 7C6.22385 7 6 6.77615 6 6.5ZM8.625 10.75C8.625 11.0952 8.34518 11.375 8 11.375C7.65482 11.375 7.375 11.0952 7.375 10.75C7.375 10.4048 7.65482 10.125 8 10.125C8.34518 10.125 8.625 10.4048 8.625 10.75Z"
+                                                            fill="#9DA9B8"></path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="finance-block finance-block-tarif">
+                            <div class="finance-block__header">
+                                <h3 class="finance-block__title">Тариф:
+                                    <span class="finance-block__subtitle">Expert</span>
+                                </h3>
+                                <a href="#" class="finance-block__link">Сменить тариф</a>
+                            </div>
+                            <ul class="finance-block__list">
+                                <li class="finance-block__item">
+                                    <p>
+                                        <span class="finance-block__span">Стоимость шаблона
+                                        </span>
+                                    </p>
+                                    <span class="finance-block__count">11 000.00 ₽</span>
+                                </li>
+                                <li class="finance-block__item">
+                                    <p>
+                                        <span class="finance-block__span">Количество шаблонов
+                                        </span>
+                                    </p>
+                                    <span class="finance-block__count">2</span>
+                                </li>
+                            </ul>
+                            <div class="finance-block__footnote">
+                                Специальные предложения действуют только для клиентов на актуальных тарифах. После
+                                оплаты обратитесь в техподдержку для активации спецпредложения.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--tabs Договор -->
+                <section class="finance finance-block finance-block__contract">
+                    <div class="finance-block__contract-wrapper">
+                        <div class="finance-block__contract-block">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores excepturi, esse ab minima,
+                            necessitatibus ipsa laborum repellat unde incidunt nostrum aperiam porro aut obcaecati
+                            voluptatibus suscipit maxime expedita! Porro, minus non. Ex provident eaque aut. Vitae
+                            aliquam architecto tempore magni reprehenderit, aliquid, exercitationem fugiat, iure
+                            consequatur dolorum tempora quaerat est inventore sapiente distinctio quia. Aut consectetur
+                            debitis ratione deleniti. Nam cumque labore culpa deserunt tenetur totam eligendi, in
+                            consectetur unde iste! Iure quam enim maiores quae repellendus non praesentium deleniti
+                            dolores corporis delectus fugiat perspiciatis eos, quis quas expedita ea. Ea ex, perferendis
+                            veniam iure non, sunt similique ratione eveniet quisquam explicabo dignissimos officiis ut
+                            dolorem? Quas eos, ratione velit veritatis nihil facere quos asperiores repellat ab, vero
+                            numquam et illo quod vel facilis qui cupiditate sunt esse excepturi natus! Vero dolore
+                            nesciunt, provident sequi voluptatibus atque iusto ratione similique dignissimos aperiam
+                            debitis expedita, ad beatae laborum corrupti eveniet quis nemo voluptatum nulla voluptas
+                            dicta ducimus voluptate? Repellat dolorem, iusto unde omnis veniam odio modi quis, quas,
+                            ullam dolorum iure aperiam porro laborum deserunt doloribus nesciunt! Sapiente nihil debitis
+                            aliquid quisquam architecto repudiandae repellendus ea similique quibusdam pariatur
+                            perspiciatis, illum, facere quidem obcaecati in, ex nostrum? Recusandae numquam laborum est
+                            unde quaerat vero odio distinctio assumenda mollitia sequi! Itaque maxime dolorem error
+                            nulla perspiciatis repudiandae nisi, ut saepe incidunt, eos quos amet adipisci. Nobis
+                            doloremque soluta odio suscipit sapiente, iusto maiores magnam itaque error repellendus,
+                            voluptas quibusdam ea veniam impedit! Maiores laudantium consectetur, repellat provident
+                            quis, libero est deserunt modi quasi harum totam. Maxime libero similique, illo, error
+                            voluptatum unde deserunt excepturi reiciendis nam suscipit veritatis, maiores porro. Cum
+                            odio ipsum architecto incidunt soluta consequuntur quod, nesciunt quos quibusdam distinctio
+                            officia reprehenderit alias dolorum sapiente sunt! Ullam quibusdam illum voluptatibus dolore
+                            ab. Voluptas assumenda eligendi officiis quidem, iure dicta reiciendis reprehenderit soluta
+                            vitae itaque facere obcaecati deleniti fugit ducimus doloribus, omnis sapiente dolor cum
+                            debitis quibusdam culpa odio. Dolor autem illo blanditiis doloremque. Nobis ut laborum
+                            commodi. Quis ad magni amet blanditiis excepturi. Quia minus esse officiis est minima
+                            numquam molestias similique accusantium enim porro delectus, animi alias corrupti facilis
+                            corporis nesciunt ea dolores temporibus modi unde. Enim ipsum provident odio a neque ipsa,
+                            ab sunt doloremque nam aut qui tempore. Soluta facilis harum aspernatur officiis aliquam.
+                            Delectus doloremque beatae velit placeat nisi ad voluptatem est. Expedita ad ea non nesciunt
+                            obcaecati at suscipit voluptatibus sed animi neque aspernatur architecto tempore asperiores
+                            nulla alias pariatur debitis quidem aut soluta, vero officiis sunt. Nostrum fugit ad
+                            accusamus aspernatur reprehenderit perspiciatis voluptatem maiores repellendus placeat quas
+                            hic accusantium quod debitis mollitia cum nihil ut, sed iste porro. Animi optio vero
+                            exercitationem ducimus excepturi delectus eius officiis molestias a, accusamus corrupti
+                            quaerat, non ab illum numquam nam dolores commodi praesentium vitae deserunt voluptatibus
+                            aspernatur eum enim nemo! Numquam earum libero aspernatur molestiae iste autem quidem? Quod
+                            debitis beatae tempore repudiandae quis asperiores pariatur voluptate delectus ut vel ipsa
+                            dolore veniam hic aspernatur eligendi repellat architecto, maxime molestias atque et dolores
+                            accusamus deserunt, nemo fuga? Alias, voluptatem nisi maiores dolorum voluptates repudiandae
+                            cupiditate iusto ipsa, qui dignissimos nulla a eligendi, tempora veritatis amet inventore
+                            repellendus laboriosam quia. Est expedita molestias reprehenderit suscipit impedit dolorum
+                            officiis voluptas distinctio temporibus accusantium doloremque quam, cum nemo dolores
+                            maiores, nisi labore id esse! Tempora culpa, tempore nam nihil eius exercitationem nesciunt
+                            molestiae reiciendis quam illo, officiis dolore quia iusto, at recusandae! Maxime odio
+                            eligendi et, enim, totam animi quod temporibus, voluptatibus unde eaque ea fuga nisi error
+                            aperiam! Culpa aspernatur dolore accusamus facilis, sit possimus voluptates recusandae
+                            quisquam praesentium id sunt illo ut et, ab similique iure explicabo beatae perspiciatis
+                            laudantium eligendi incidunt, odio enim? Nostrum temporibus a asperiores recusandae rerum
+                            maxime sequi quibusdam voluptates, quam molestias, iusto inventore ratione veritatis
+                            architecto, quas sed reiciendis quasi vero! Maxime quae ipsa iste laborum, minima optio
+                            perspiciatis laudantium blanditiis? Dolor ea veritatis corporis minima. Ad magnam nulla
+                            illum libero. Ab expedita cupiditate aliquam quibusdam soluta ipsum repellendus blanditiis
+                            placeat! Veniam veritatis, distinctio vel quisquam dolorum voluptas consequuntur magnam hic
+                            nulla soluta molestias sequi quidem? Fugiat blanditiis ab, accusantium eaque ut molestias
+                            quisquam sapiente tempore dolore similique. Reprehenderit
+                        </div>
+                    </div>
+                    <div class="finance-block__contract-footer">
+                        Договор принят 10 фев. 2023 14:02
+                    </div>
+                </section>
+
+                <!-- tabs Транзакции-->
+                <section class="finance finance-block-transaction">
+                    <div class="finance-block__date">Траты за
+                        <input type="date" class="finance-block__transaction-input">:<span
+                            class="finance-block__transaction-price">5 499.93 ₽</span>
+                    </div>
+                    <div class="table">
+                        <div class="table-wrapper table-wrapper-transaction">
+                            <table class="table-item-transaction">
+                                <thead>
+                                    <tr>
+                                        <th class="table-item-transaction__th header">Дата<span
+                                                class="table-item-transaction__span"><svg width="14" height="14"
+                                                    viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M.332 7A6.67 6.67 0 016.999.335a6.67 6.67 0 016.666 6.667A6.67 6.67 0 017 13.667 6.67 6.67 0 01.332 7.001zm4.573-.093l1.86 1.86c.127.127.34.127.474-.006l1.86-1.86a.33.33 0 00-.234-.567H5.14c-.3 0-.447.36-.234.573z"
+                                                        fill="#9DA9B8" />
+                                                </svg></span></th>
+                                        <th class="table-item-transaction__th header">Событие</th>
+                                        <th class="table-item-transaction__th header">Сумма, ₽</th>
+                                        <th class="table-item-transaction__th header"></th>
+                                    </tr>
+                                </thead>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-transaction">
+                                    <tr>
+                                        <th class="table-item-transaction__th">21.04.2023</th>
+                                        <th class="table-item-transaction__th">Абонентская плата</th>
+                                        <th class="table-item-transaction__th">-733.33</th>
+                                        <th class="table-item-transaction__th"></th>
+                                    </tr>
+                                </table>
+                        </div>
+                        <div class="table-pagination table-pagination-transaction">
+                            <div class="table-pagination__wrapper">
+                                <span>Страница:</span>
+                                <input type="number" value="1">
+                                <span>из 1</span>
+                            </div>
+                            <div class="table-pagination__btns">
+                                <button class="table-pagination__btn table-pagination__btn_prev">
+                                    <svg data-v-7393e354="" data-v-b1ab06ce="" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" viewBox="0 0 16 16" aria-labelledby="paginationLeft"
+                                        role="presentation">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354="" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9.42022 5.61219C9.66022 5.37219 9.66022 4.9845 9.42022 4.7445C9.18022 4.5045 8.78637 4.5045 8.55253 4.73834L5.72791 7.56296C5.48791 7.80296 5.48791 8.19065 5.72791 8.43065L8.55253 11.2553C8.79253 11.4953 9.18022 11.4953 9.42022 11.2553C9.66022 11.0153 9.66022 10.6276 9.42022 10.3876L7.03253 7.99988L9.42022 5.61219Z"
+                                                fill="#9DA9B8"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="table-pagination__btn table-pagination__btn_next">
+                                    <svg data-v-7393e354="" data-v-b1ab06ce="" xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" viewBox="0 0 16 16" aria-labelledby="paginationLeft"
+                                        role="presentation">
+                                        <g data-v-7393e354="" fill="none">
+                                            <path data-v-7393e354="" fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9.42022 5.61219C9.66022 5.37219 9.66022 4.9845 9.42022 4.7445C9.18022 4.5045 8.78637 4.5045 8.55253 4.73834L5.72791 7.56296C5.48791 7.80296 5.48791 8.19065 5.72791 8.43065L8.55253 11.2553C8.79253 11.4953 9.18022 11.4953 9.42022 11.2553C9.66022 11.0153 9.66022 10.6276 9.42022 10.3876L7.03253 7.99988L9.42022 5.61219Z"
+                                                fill="#9DA9B8"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- tabs Платежи и акты-->
+                <section class="finance finance-block-payments">
+                    <div class="table">
+                        <div class="table-wrapper table-wrapper-payments">
+                            <table class="table-item-payments">
+                                <thead>
+                                    <tr>
+                                        <th class="table-item-payments__th header">Дата<span
+                                                class="table-item-payments__span"><svg width="14" height="14"
+                                                    viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M.332 7A6.67 6.67 0 016.999.335a6.67 6.67 0 016.666 6.667A6.67 6.67 0 017 13.667 6.67 6.67 0 01.332 7.001zm4.573-.093l1.86 1.86c.127.127.34.127.474-.006l1.86-1.86a.33.33 0 00-.234-.567H5.14c-.3 0-.447.36-.234.573z"
+                                                        fill="#9DA9B8" />
+                                                </svg></span></th>
+                                        <th class="table-item-payments__th header">Сумма, ₽</th>
+                                        <th class="table-item-payments__th header">Назначение</th>
+                                        <th class="table-item-payments__th header">Контрагент</th>
+                                        <th class="table-item-payments__th header">Акт</th>
+                                        <th class="table-item-payments__th header"></th>
+                                    </tr>
+                                </thead>
+                                <table class="table-item-payments">
+                                    <tr>
+                                        <th class="table-item-payments__th">21.04.2023</th>
+                                        <th class="table-item-payments__th">10571.00</th>
+                                        <th class="table-item-payments__th">Robokassa, InvId: 16992</th>
+                                        <th class="table-item-payments__th">E-mail: info@leads-radar.ru</th>
+                                        <th class="table-item-payments__th"></th>
+                                        <th class="table-item-payments__th"></th>
+                                    </tr>
+                                </table>
+                                <table class="table-item-payments">
+                                    <tr>
+                                        <th class="table-item-payments__th">21.04.2023</th>
+                                        <th class="table-item-payments__th">10571.00</th>
+                                        <th class="table-item-payments__th">Robokassa, InvId: 17051, Sum: 11000.00, Fee:
+                                            429.00</th>
+                                        <th class="table-item-payments__th">E-mail: info@leads-radar.ru</th>
+                                        <th class="table-item-payments__th"></th>
+                                        <th class="table-item-payments__th"></th>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- tabs Реферальная программа-->
+                <section class="finance finance-block-referall">
+                    <h3 class="finance-block-referall__title">Реферальная программа CARDPR</h3>
+                    <p class="finance-block-referall__subtitle">Нравится сервис электронных карт CARDPR —
+                        <span class="finance-block__span"> рекомендуйте сервис и получайте вознаграждение.
+                    </p></span>
+                    <form action="" class="finance-block-referall__form">
+                        <div class="finance-block__input finance-block-referall__input">
+                            <input type="text" name="ref_link" id="ref_link" value="https://ru.cardpr.com/?promo=OOOO"
+                                class="focusedInput">
+                            <label for="ref_link" class="finance-block__label">Реферальная ссылка</label>
+                        </div>
+                        <span data-v-74d5a11b="" class="finance-block-referall__icon"><svg data-v-7393e354=""
+                                data-v-74d5a11b="" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                viewBox="0 0 18 16" aria-labelledby="copy" role="presentation">
+                                <g data-v-7393e354="" fill="none">
+                                    <path data-v-7393e354="" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.33317 0.666626H1.99984C1.2665 0.666626 0.666504 1.26663 0.666504 1.99996V10.6666C0.666504 11.0333 0.966504 11.3333 1.33317 11.3333C1.69984 11.3333 1.99984 11.0333 1.99984 10.6666V2.66663C1.99984 2.29996 2.29984 1.99996 2.6665 1.99996H9.33317C9.69984 1.99996 9.99984 1.69996 9.99984 1.33329C9.99984 0.966626 9.69984 0.666626 9.33317 0.666626ZM11.9998 3.33329H4.6665C3.93317 3.33329 3.33317 3.93329 3.33317 4.66663V14C3.33317 14.7333 3.93317 15.3333 4.6665 15.3333H11.9998C12.7332 15.3333 13.3332 14.7333 13.3332 14V4.66663C13.3332 3.93329 12.7332 3.33329 11.9998 3.33329ZM5.33317 14H11.3332C11.6998 14 11.9998 13.7 11.9998 13.3333V5.33329C11.9998 4.96663 11.6998 4.66663 11.3332 4.66663H5.33317C4.9665 4.66663 4.6665 4.96663 4.6665 5.33329V13.3333C4.6665 13.7 4.9665 14 5.33317 14Z"
+                                        fill="#9DA9B8"></path>
+                                </g>
+                            </svg></span>
+                        <button type="button" class="finance-block-referall__button button white">Статистика</button>
+                    </form>
+                    <div class="finance-block-referall__promocode">
+                        <p>Промокод: <span class="finance-block__count">OOOO</span></p>
+                        <p>Ваше вознаграждение: <span class="finance-block__count">5.00%</span></p>
+                        <p class="finance-block-referall__footnote">В случае отсутствия подключения клиентов с этим
+                            промокодом
+                            в течение месяца, промокод может быть деактивирован.</p>
+                    </div>
+                    <div class="finance-block-referall__rule">
+                        <p>Полные правила реферальной программы:</p>
+                        <a href="https://ru.cardpr.com/agent_offer"
+                            class="finance-block-referall__link">https://ru.cardpr.com/agent_offer</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="popup popup_pay_online">
+            <div class="popup__container">
+                <div class="popup__header">
+                    <p class="popup__title">Переход на страницу онлайн-оплаты
+                    </p>
+                    <button class="popup__header-exit popup-exit">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                                fill="#9da9b8" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="popup__body"><span class="finance-block__span">К оплате<span class="finance-block__count">
+                            0000 ₽</span></span>
+                    Для оплаты — перейдите в платежную систему.
+                </div>
+                <button type="button" class="button blue popup__button">Перейти</button>
+                <button type="button" class="button light popup__button popup-button-cancel">Отмена</button>
+            </div>
+        </div>
+
+        <div class="popup popup_issue_an_invoice">
+            <div class="popup__container">
+                <div class="popup__header">
+                    <p class="popup__title">Укажите плательщика
+                    </p>
+                    <button class="popup__header-exit popup-exit">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M32 28.8L19.2 16L32 3.2L28.8 0L16 12.8L3.2 0L0 3.2L12.8 16L0 28.8L3.2 32L16 19.2L28.8 32L32 28.8Z"
+                                fill="#9da9b8" />
+                        </svg>
+                    </button>
+                </div>
+
+                <form class="popup__body" name="form-finance-payer"><span class="finance-block__span">К оплате<span
+                            class="finance-block__count"> 0000 ₽</span></span>
+
+                    <div class="finance-block__input popup-input-payer">
+                        <input type="text" name="finance-payer" id="finance-payer" class="popup-input__finance-payer">
+                        <label for="finance-payer" class="finance-block__label">Плательщик (необязательно)</label>
+                    </div>
+                    <p class="popup__text">Данные плательщика отобразятся на счёте.</p>
+                </form>
+                <button type="button" class="button blue popup__button" form="form-finance-payer">Скачать счет</button>
+                <button type="button" class="button light popup__button popup-button-cancel">Отмена</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
