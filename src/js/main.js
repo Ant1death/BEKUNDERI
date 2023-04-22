@@ -305,22 +305,6 @@ window.addEventListener('DOMContentLoaded',() => {
     }
 
     //finance page
-    //tabs
-    const financeTabs = document.querySelectorAll('.finance-tabs')
-    const tabsTarif = document.querySelector('#tabs-btns__tarif')
-    const tabsContract= document.querySelector('#tabs-btns__contract')
-    const tabsTransaction = document.querySelector('#tabs-btns__transaction')
-    const tabsPayment = document.querySelector('#tabs-btns__payment')
-    const tabsReferral = document.querySelector('#tabs-btns__referral')
-
-    //blocks on page Finance
-    const blocksFinance = document.querySelectorAll('.finance')
-    const blockFinanceTarif = document.querySelector('.finance-wrapper')
-    const blockFinanceContract = document.querySelector('.finance-block__contract')
-    const blockFinanceTransaction = document.querySelector('.finance-block-transaction')
-    const blockFinancePayments = document.querySelector('.finance-block-payments')
-    const blockFinanceReferall = document.querySelector('.finance-block-referall')
-
     //inputs 
     const inputForRefLink = document.querySelector('#ref_link')
     const inputTarifForPay = document.querySelector('#sum_for_pay')
@@ -426,35 +410,6 @@ window.addEventListener('DOMContentLoaded',() => {
             })
         })
     }
-
-    const tabsFinanceChange = (currentButton, currentBlock, blocks, tabs) =>{
-        currentButton.addEventListener('click', ()=>{
-        blocks.forEach((block)=>{
-            block.classList.remove('active')
-        })
-
-        tabs.forEach((block)=>{
-            block.classList.remove('active')
-        })
-        currentButton.classList.add('active')
-        currentBlock.classList.add('active')
-    })
-    }
-
-    if(tabsTarif)
-        tabsFinanceChange(tabsTarif, blockFinanceTarif, blocksFinance, financeTabs)
-    
-    if(tabsContract)
-        tabsFinanceChange(tabsContract, blockFinanceContract, blocksFinance, financeTabs)
-
-    if(tabsTransaction)
-        tabsFinanceChange(tabsTransaction, blockFinanceTransaction, blocksFinance, financeTabs)
-
-    if(tabsPayment)
-        tabsFinanceChange(tabsPayment, blockFinancePayments, blocksFinance, financeTabs)
-
-    if(tabsReferral)
-        tabsFinanceChange(tabsReferral, blockFinanceReferall, blocksFinance, financeTabs)
 
 
 
