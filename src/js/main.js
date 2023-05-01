@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded',() => {
     sw2();
     // настройка инпутов
     const inputs = document.querySelectorAll('input[type="text"]');
-    const textAreas = document.querySelectorAll('textarea')
+    const textAreas = document.querySelectorAll('textarea');
     if(inputs) {
         inputs.forEach((item,i) => {
             if(item.value.length > 0) {

@@ -2,7 +2,7 @@ import Swal from 'sweetalert2'
 import axios from 'axios';
 
 function sw2() {
-    let csrfToken = document.head.querySelector('meta[name="csrf_token"]').getAttribute('value');
+    
     
     // попап выйти с устройств
     const exitDevice = document.querySelector('.general-item__devices');
@@ -134,19 +134,21 @@ function sw2() {
             if (result.isConfirmed) {
               // createAccesses(result.value);
               let formData = result.value;
-              console.log(formData);
-              axios({
-                method: 'post',
-                url: `${accessesUrl}`,
-                headers: {
-                  'X-CSRFTOKEN': csrfToken
-                },
-                data: formData,
-              }).then((response) => {
-                console.log(response);
-              }).catch((error) => {
-                console.log(error);
-              });
+              let csrfToken = document.head.querySelector('meta[name="csrf_token"]').getAttribute('value');
+              if(csrfToken) {
+                axios({
+                  method: 'post',
+                  url: `${accessesUrl}`,
+                  headers: {
+                    'X-CSRFTOKEN': csrfToken
+                  },
+                  data: formData,
+                }).then((response) => {
+                  console.log(response);
+                }).catch((error) => {
+                  console.log(error);
+                });
+              }
             } else if (result.isDenied) {
             
             }

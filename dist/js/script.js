@@ -18,8 +18,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function sw2() {
-  let csrfToken = document.head.querySelector('meta[name="csrf_token"]').getAttribute('value');
-
   // попап выйти с устройств
   const exitDevice = document.querySelector('.general-item__devices');
   if (exitDevice) {
@@ -138,19 +136,21 @@ function sw2() {
         if (result.isConfirmed) {
           // createAccesses(result.value);
           let formData = result.value;
-          console.log(formData);
-          (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
-            method: 'post',
-            url: `${accessesUrl}`,
-            headers: {
-              'X-CSRFTOKEN': csrfToken
-            },
-            data: formData
-          }).then(response => {
-            console.log(response);
-          }).catch(error => {
-            console.log(error);
-          });
+          let csrfToken = document.head.querySelector('meta[name="csrf_token"]').getAttribute('value');
+          if (csrfToken) {
+            (0,axios__WEBPACK_IMPORTED_MODULE_1__["default"])({
+              method: 'post',
+              url: `${accessesUrl}`,
+              headers: {
+                'X-CSRFTOKEN': csrfToken
+              },
+              data: formData
+            }).then(response => {
+              console.log(response);
+            }).catch(error => {
+              console.log(error);
+            });
+          }
         } else if (result.isDenied) {}
       });
     });
