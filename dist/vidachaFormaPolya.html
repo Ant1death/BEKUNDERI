@@ -142,116 +142,67 @@
                     </a>
                 </div>
                 <div class="settings-btns">
-                    <a href='#' class="settings-btns__item active">Параметры</a>
-                    <a href='#' class="settings-btns__item">Поля</a>
+                    <a href='#' class="settings-btns__item">Параметры</a>
+                    <a href='#' class="settings-btns__item active">Поля</a>
                     <a href='#' class="settings-btns__item">Соглашение</a>
                     <a href='#' class="settings-btns__item">Установка</a>
                 </div>
-                <div class="issuanceCard">
-                    <form action="" class="issuanceCard-form" method="post" id="issuanceCardForm">
-                        <div class="issuanceCard-form__item">
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Название формы</h2>
-                                <div class="input-wrapper">
-                                    <input type="text" name="" value="Form#1434" class="focusedInput">
-                                    <label for="" class="label-absolute">Название формы</label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Основные</h2>
-                                <div class="input-wrapper">
-                                    <input type="text" name="" value="Бонусная карта" class="focusedInput">
-                                    <label for="" class="label-absolute">Заголовок</label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <div class="input-wrapper input-wrapper__checkbox">
-                                    <input type="checkbox" name="" id="descriptionInput">
-                                    <label for="descriptionInput" class=""> Показывать страницу с описанием </label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <div class="input-wrapper">
-                                    <textarea name="" id="" cols="30" rows="10" class="" style="height: 100px; resize: none;"></textarea>
-                                    <label for="" class="label-absolute">Заголовок</label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Шаблон карты</h2>
-                                <div class="input-wrapper">
-                                    <select name="" id="" class="general-item__select">
-                                        <option value="выберите" disabled selected>выберите</option>
-                                        <option value="temp">temp</option>
-                                        <option value="temp">temp</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <button type="submit" form="issuanceCardForm" class="issuanceCard-form__submit button is-link ">Сохранить</button>
-                            </div>
-                        </div>
-                        <div class="issuanceCard-form__item">
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Параметры web-push</h2>
-                                <div class="input-wrapper">
-                                    <input type="text" name="" value=" URL для web-push" class="focusedInput">
-                                    <label for="" class="label-absolute"> URL для web-push</label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Цветовая схема</h2>
-                                <div class="input-wrapper">
-                                    <select name="" id="" class="general-item__select">
-                                        <option value="выберите" disabled selected>выберите</option>
-                                        <option value="temp">temp</option>
-                                        <option value="temp">temp</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Язык</h2>
-                                <div class="input-wrapper">
-                                    <select name="" id="" class="general-item__select">
-                                        <option value="выберите" disabled selected>выберите</option>
-                                        <option value="temp">temp</option>
-                                        <option value="temp">temp</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Верификация телефонов</h2>
-                                <div class="input-wrapper input-wrapper__checkbox input-wrapper__checkbox_paddings">
-                                    <input type="checkbox" name="" id="sms">
-                                    <label for="sms" class=""> SMS </label>
-                                </div>
-                                <div class="input-wrapper input-wrapper__checkbox input-wrapper__checkbox_paddings">
-                                    <input type="checkbox" name="" id="call">
-                                    <label for="call" class=""> Call </label>
-                                </div>
-                                <div class="input-wrapper input-wrapper__checkbox input-wrapper__checkbox_paddings">
-                                    <input type="checkbox" name="" id="voice">
-                                    <label for="voice" class=""> Voice </label>
-                                </div>
-                                <div class="input-wrapper input-wrapper__checkbox input-wrapper__checkbox_paddings">
-                                    <input type="checkbox" name="" id="tg">
-                                    <label for="tg" class=""> Telegramm </label>
-                                </div>
-                            </div>
-                            <div class="issuanceCard-form__wrapper">
-                                <h2 class="issuanceCard-form__title">Язык</h2>
-                                <div class="input-wrapper">
-                                    <select name="" id="" class="general-item__select">
-                                        <option value="выберите" disabled selected>выберите</option>
-                                        <option value="temp">temp</option>
-                                        <option value="temp">temp</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    
+                <table class="table-item table-item_issuanceCard">
+                    <thead>
+                        <tr class="table-row table-row_issuanceCard">
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_heads" style="min-width: 265px; max-width: 265px; width: 265px;">Название</th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_heads" style="min-width: 200px; max-width: 200px; width: 200px;">Тип</th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_heads" style="min-width: 310px; max-width: 310px; width: 310px;">Обязательное</th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_heads" style="min-width: 100px; max-width: 100px; width: 100px;">Статус</th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_heads" style="min-width: 100%; max-width: 100%; width: 100%;">Сообщение об ошибке</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row table-row_issuanceCard table-row_issuanceCard_items">
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item"> 
+                                <input type="text" value="`cardholder`" class="issuanceCard-name">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item">
+                                <select name="" id="" class="table-column_issuanceCard-select">
+                                    <option value="">строка</option>
+                                </select>
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item">
+                                <input type="checkbox" class="table-column_issuanceCard-checkbox">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item">
+                                <input type="checkbox" class="table-column_issuanceCard-checkbox">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new">
+                                <input type="text" value="`cardholder`" class="issuanceCard-error">
+                            </th>
+                        </tr>
+                        <tr class="table-row table-row_issuanceCard table-row_issuanceCard_items">
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new"> 
+                                <input type="text" value="`cardholder`" class="issuanceCard-name">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new">
+                                <select name="" id="" class="table-column_issuanceCard-select">
+                                    <option value="">строка</option>
+                                </select>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new">
+                                <input type="checkbox" class="table-column_issuanceCard-checkbox">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new">
+                                <input type="checkbox" class="table-column_issuanceCard-checkbox">
+                            </th>
+                            <th class="table-column table-column_issuanceCard table-column_issuanceCard_item table-column_issuanceCard_item_new">
+                                <input type="text" value="`cardholder`" class="issuanceCard-error">
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issuanceCard__wrapper-add">
+                    <button class="issuanceCard__wrapper-new"> 
+                        <img src="assets/icons/blue-plus.svg" alt="plus">
+                        <span>Добавить поле</span>
+                    </button>
                 </div>
-                
             </main>
         </div>
     </div>
