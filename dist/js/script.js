@@ -8746,6 +8746,22 @@ if (shortcats) {
     });
   });
 }
+const issuanceCardTableNewBtn = document.querySelector('.issuanceCard__wrapper-new');
+if (issuanceCardTableNewBtn) {
+  let count = 0;
+  issuanceCardTableNewBtn.addEventListener('click', e => {
+    let issuanceCardTableNew = document.querySelectorAll('.table-row_issuanceCard_items.hidden');
+    if (count >= 16) {
+      issuanceCardTableNewBtn.classList.add('hidden');
+    } else {
+      let slisedRow = [...issuanceCardTableNew].slice(0, 1);
+      slisedRow.forEach((item, i) => {
+        item.classList.remove('hidden');
+      });
+      count++;
+    }
+  });
+}
 })();
 
 /******/ })()

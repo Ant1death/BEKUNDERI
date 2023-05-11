@@ -107,6 +107,7 @@
         // border-color: #f7f8fc
 .issuanceCard__wrapper-add
     margin-top: 20px
+    margin-bottom: 40px
 .issuanceCard__wrapper-new
     display: flex
     align-items: center
@@ -114,6 +115,8 @@
         margin-right: 8px
         width: 16px
         height: 16px
+    &.hidden
+        display: none
 .table-column_issuanceCard-select
     width: 80%
     padding: 5px
@@ -132,5 +135,8 @@
 .table-column_issuanceCard_item:nth-child(2)
     text-align: left !important
     padding: 0 !important
+.table-row_issuanceCard_items.hidden
+    display: none
+
 .table-row_issuanceCard_items:nth-child(odd)
     background-color: #f7f8fc !important
