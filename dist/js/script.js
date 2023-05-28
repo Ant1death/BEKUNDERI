@@ -8762,6 +8762,17 @@ if (issuanceCardTableNewBtn) {
     }
   });
 }
+// swiper-bonuska
+const swiper = new Swiper('.bonus-form__content', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  // Navigation arrows
+  navigation: {
+    nextEl: '#bonus-next',
+    prevEl: '#bonus-prev'
+  }
+});
 })();
 
 /******/ })()
