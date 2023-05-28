@@ -8763,16 +8763,19 @@ if (issuanceCardTableNewBtn) {
   });
 }
 // swiper-bonuska
-const swiper = new Swiper('.bonus-form__content', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: false,
-  // Navigation arrows
-  navigation: {
-    nextEl: '#bonus-next',
-    prevEl: '#bonus-prev'
-  }
-});
+const swiperBonuska = document.querySelector('.bonus-form__content');
+if (swiperBonuska) {
+  const swiper = new Swiper('.bonus-form__content', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    // Navigation arrows
+    navigation: {
+      nextEl: '#bonus-next',
+      prevEl: '#bonus-prev'
+    }
+  });
+}
 })();
 
 /******/ })()
