@@ -8442,7 +8442,6 @@ window.addEventListener('DOMContentLoaded', () => {
         sampleWalletSelect.classList.remove('active');
         sampleWalletSettingsForm.classList.add('active');
         sampleWalletSettingsLi[i].classList.add('active');
-        console.log(i);
       });
     });
   }
@@ -8774,6 +8773,37 @@ if (swiperBonuska) {
       nextEl: '#bonus-next',
       prevEl: '#bonus-prev'
     }
+  });
+}
+//obratnaya apple
+const appleBackLeftItem = document.querySelectorAll('.sample__item_apple_back ul li');
+const appleBackRightItem = document.querySelectorAll('.sample__settings-back_apple form ul li');
+const addBackLeftBtn = document.querySelector('.sample__item_apple_back-add');
+// let appleBackLeftItemHiiden = document.querySelectorAll('.sample__item_apple_back ul li.hidden');
+
+function hideAppleBack() {
+  appleBackRightItem.forEach((item, i) => {
+    item.classList.remove('active');
+  });
+}
+function showAppleBack() {
+  let i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  appleBackRightItem[i].classList.add('active');
+}
+if (appleBackLeftItem) {
+  appleBackLeftItem.forEach((item, i) => {
+    item.addEventListener('click', e => {
+      if (e.target !== item.querySelector('.apple__back-delete') && e.target !== item.querySelector('.apple__back-delete img')) {
+        hideAppleBack();
+        showAppleBack(i);
+      }
+    });
+  });
+}
+if (addBackLeftBtn) {
+  addBackLeftBtn.addEventListener('click', e => {
+    let appleBackLeftItemHiiden = document.querySelector('.sample__item_apple_back ul li.hidden');
+    appleBackLeftItemHiiden.classList.remove('hidden');
   });
 }
 })();
