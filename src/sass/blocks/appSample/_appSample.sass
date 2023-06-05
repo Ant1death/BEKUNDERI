@@ -35,21 +35,109 @@
         &-settings
             max-height: 100%
         &_google
+            overflow: hidden
             >.sample__header
                 display: flex
                 align-items: center
                 padding: 3px 20px
                 flex-direction: row
-                span
-                    &:nth-child(1)
+                div:nth-child(1)
+                    height: 30px
+                    margin-right: 10px
+                    img
                         width: 30px
                         height: 30px
-                        display: flex
+                        border-radius: 50%
+                div:nth-child(2)
+                    span
                         margin-right: 10px
-                        img
-                            border-radius: 50%
+            >.sample__info-title
+                padding: 7px 15px
+                width: 100%
+                display: flex
+                justify-content: flex-start
+                max-width: 100%
+                overflow: hidden
+                font-size: 18px
+                color: #000
+                text-overflow: ellipsis
+                white-space: nowrap
+            >.sample__info
+                display: flex
+                justify-content: space-between
+                >.sample__info-item
+                    span:nth-child(1)
+                        text-align: left
+                        width: 100%
+                        height: 14px
+                        margin-bottom: 2px
+                        overflow: hidden
+                        font-size: 10px
+                        line-height: .875rem
+                        text-align: left
+                        text-overflow: ellipsis
+                        text-transform: uppercase
+                        letter-spacing: .05em
+                        word-break: break-all
+                        white-space: nowrap
+                        -webkit-transition: color .2s ease
+                        transition: color .2s ease
+                    span:nth-child(2)
+                        width: 100%
+                        height: 21px
+                        overflow: hidden
+                        font-size: 14px
+                        font-weight: 400
+                        font-style: normal
+                        line-height: 1.3125rem
+                        text-align: left
+                        text-overflow: ellipsis
+                        word-break: break-all
+                        white-space: nowrap
+                        -webkit-transition: color .2s ease
+                        transition: color .2s ease
                     &:nth-child(2)
-                        font-size: 12px
+                        >span
+                            text-align: right
+            >.sample__qr-img
+                display: flex
+                -webkit-box-direction: normal
+                -ms-flex-wrap: nowrap
+                flex-wrap: nowrap
+                align-content: center
+                -webkit-box-align: center
+                align-items: center
+                width: auto
+                height: auto
+                padding: 16px
+                margin: 0 auto
+                background: #fff
+                -ms-flex-direction: column
+                -webkit-box-orient: vertical
+                flex-direction: column
+                -webkit-box-pack: end
+                -ms-flex-pack: end
+                justify-content: flex-end
+                -ms-flex-line-pack: center
+                -ms-flex-align: center
+                -webkit-box-shadow: 1px 1px 8px rgba(0,0,0,.05)
+                box-shadow: 1px 1px 8px rgba(0,0,0,.05)
+            >.sample__qr-text
+                display: flex
+                justify-content: center
+                width: 100%
+                height: 21px
+                overflow: hidden
+                font-size: 14px
+                font-style: normal
+                line-height: 1.3125rem
+                text-align: left
+                text-overflow: ellipsis
+                word-break: break-all
+                white-space: nowrap
+                -webkit-transition: color .2s ease
+                transition: color .2s ease
+                margin: 8px 0
         &_apple
             >.sample__header
                 display: flex
@@ -362,6 +450,80 @@
                     -webkit-box-orient: vertical
                     display: -webkit-box
 .sample__item_apple_back-add
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 30px 20px
+    width: 100%
+    img
+        width: 15px
+        height: 12px
+        margin-right: 10px
+.sample__settings-back_google
+    width: 100%
+    padding: 10px 0 0 11px
+    form
+        ul
+            li
+                display: none
+                flex-direction: column
+                gap: 15px
+                &.active
+                    display: flex
+                .input-wrapper
+                    label
+                        position: absolute
+                    textarea
+                        resize: none
+                        height: 150px
+.sample__item_google_back
+    ul
+        width: 100%
+        li
+            display: flex
+            align-items: flex-start
+            padding: 20px
+            position: relative
+            cursor: pointer
+            border-bottom: 1px solid #e7e7e7
+            &.hidden
+                display: none
+            button
+                position: absolute
+                right: 25px
+                top: 20px
+                z-index: 50
+            >img
+                width: 18px
+                height: 18px
+                margin-right: 15px
+            div
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                span:nth-child(1)
+                    width: 100%
+                    height: 14px
+                    margin: 0 0 8px 0
+                    overflow: hidden
+                    font-size: 13px
+                    font-weight: 400
+                    line-height: 14px
+                    text-overflow: ellipsis
+                    letter-spacing: .05em
+                    -webkit-line-clamp: 1
+                    -webkit-box-orient: vertical
+                    display: -webkit-box
+                span:nth-child(2)
+                    height: 40px
+                    overflow: hidden
+                    font-size: 14px
+                    line-height: 21px
+                    display: block
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
+                    display: -webkit-box
+.sample__item_google_back-add
     display: flex
     align-items: center
     justify-content: flex-start

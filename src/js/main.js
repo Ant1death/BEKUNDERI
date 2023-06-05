@@ -444,7 +444,7 @@ window.addEventListener('DOMContentLoaded',() => {
     //obratnaya apple
     const appleBackLeftItem = document.querySelectorAll('.sample__item_apple_back ul li');
     const appleBackRightItem = document.querySelectorAll('.sample__settings-back_apple form ul li');
-    const addBackLeftBtn = document.querySelector('.sample__item_apple_back-add');
+    const addBackLeftBtnApple = document.querySelector('.sample__item_apple_back-add');
     // let appleBackLeftItemHiiden = document.querySelectorAll('.sample__item_apple_back ul li.hidden');
 
     function hideAppleBack() {
@@ -466,10 +466,40 @@ window.addEventListener('DOMContentLoaded',() => {
             });
         });
     }
-    if(addBackLeftBtn) {
-        addBackLeftBtn.addEventListener('click',(e) => {
+    if(addBackLeftBtnApple) {
+        addBackLeftBtnApple.addEventListener('click',(e) => {
             let appleBackLeftItemHiiden = document.querySelector('.sample__item_apple_back ul li.hidden');
             appleBackLeftItemHiiden.classList.remove('hidden');
+        });
+    }
+    //obratnaya google
+    const googleBackLeftItem = document.querySelectorAll('.sample__item_google_back ul li');
+    const googleBackRightItem = document.querySelectorAll('.sample__settings-back_google form ul li');
+    const addBackLeftBtnGoogle = document.querySelector('.sample__item_google_back-add');
+
+    function hideGoogleBack() {
+        googleBackRightItem.forEach((item,i) => {
+            item.classList.remove('active');
+        });
+    }
+    function showGoogleBack(i = 0) {
+        googleBackRightItem[i].classList.add('active');
+    }
+    if(googleBackLeftItem) {
+        googleBackLeftItem.forEach((item,i) => {
+            item.addEventListener('click',(e) => {
+                if(e.target !== item.querySelector('.google__back-delete') && e.target !== item.querySelector('.google__back-delete img')) {
+                    hideGoogleBack();
+                    showGoogleBack(i);
+                }
+                
+            });
+        });
+    }
+    if(addBackLeftBtnGoogle) {
+        addBackLeftBtnGoogle.addEventListener('click',(e) => {
+            let googleBackLeftItemHiiden = document.querySelector('.sample__item_google_back ul li.hidden');
+            googleBackLeftItemHiiden.classList.remove('hidden');
         });
     }
     
