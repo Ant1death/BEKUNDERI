@@ -508,7 +508,7 @@ window.addEventListener('DOMContentLoaded',() => {
     issuanceCardItem.forEach((item,i) => {
         item.addEventListener('click',(e) => {
             const target = e.target;
-            const issuanceCardItemUrl = document.querySelector('.issuanceCard__content-item_url');
+            let issuanceCardItemUrl = item.querySelector('.issuanceCard__content-item_url');
             if(target == issuanceCardItemUrl || issuanceCardItemUrl.contains(target)) {
                 e.preventDefault();
                 issuanceCardItemUrl.getAttribute('data-url');
