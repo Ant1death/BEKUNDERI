@@ -49,8 +49,16 @@
                         height: 30px
                         border-radius: 50%
                 div:nth-child(2)
+                    overflow: hidden
+                    width: 100%
                     span
                         margin-right: 10px
+                        width: 100%
+                        overflow: hidden
+                        text-overflow: ellipsis
+                        word-break: break-all
+                        white-space: nowrap
+                        display: block
             >.sample__info-title
                 padding: 7px 15px
                 width: 100%
@@ -150,9 +158,30 @@
                     flex-direction: column
                     &:nth-last-child(1)
                         align-items: flex-end
+                        width: 50%
                         span
                             &:nth-last-child(1)
                                 font-weight: 700
+                                width: 100%
+                                overflow: hidden
+                                text-overflow: ellipsis
+                                word-break: break-all
+                                white-space: nowrap
+                                text-align: right
+                            &:nth-last-child(2)
+                                width: 100%
+                                overflow: hidden
+                                text-overflow: ellipsis
+                                word-break: break-all
+                                white-space: nowrap
+                                text-align: right
+                div:nth-child(1)
+                    height: 30px
+                    margin-right: 10px
+                    img
+                        width: 30px
+                        height: 30px
+                        border-radius: 50%
         &_new
             width: 280px
             min-height: 320px

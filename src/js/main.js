@@ -502,4 +502,25 @@ window.addEventListener('DOMContentLoaded',() => {
             googleBackLeftItemHiiden.classList.remove('hidden');
         });
     }
+    //vidacha
+    const issuanceCardItem = document.querySelectorAll('.issuanceCard__item');
+    
+    issuanceCardItem.forEach((item,i) => {
+        item.addEventListener('click',(e) => {
+            const target = e.target;
+            const issuanceCardItemUrl = document.querySelector('.issuanceCard__content-item_url');
+            if(target == issuanceCardItemUrl || issuanceCardItemUrl.contains(target)) {
+                e.preventDefault();
+                issuanceCardItemUrl.getAttribute('data-url');
+                let urlCopy = document.createElement('input');
+                document.body.appendChild(urlCopy);
+                urlCopy.value = `${issuanceCardItemUrl.getAttribute('data-url')}`
+                urlCopy.select()
+                document.execCommand("copy");
+                alert('Скопировано');
+                urlCopy.remove();
+            }
+        });
+        
+    });
     
