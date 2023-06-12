@@ -521,6 +521,19 @@ window.addEventListener('DOMContentLoaded',() => {
                 urlCopy.remove();
             }
         });
-        
     });
-    
+    // clientRedak
+    const copyLinkClientRedak = document.querySelectorAll('.clientRedak-copyLink');
+    if(copyLinkClientRedak) {
+        copyLinkClientRedak.forEach((item,i) => {
+            item.addEventListener('click',(e) => {
+                let urlCopy = document.createElement('input');
+                document.body.appendChild(urlCopy);
+                urlCopy.value = `${item.getAttribute('data-url')}`
+                urlCopy.select()
+                document.execCommand("copy");
+                alert('Скопировано');
+                urlCopy.remove();
+            });
+        });
+    }
